@@ -3,11 +3,12 @@
 ## command
 
 ```bash
-mvn compile
+mvn clean compile
 ```
 
 ## content
 
 ```
 ├─ tbd
+└─ tbd
 ```
