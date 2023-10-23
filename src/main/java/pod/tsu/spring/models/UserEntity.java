@@ -10,7 +10,6 @@ import lombok.Setter;
 @Setter
 public class UserEntity {
 
-    private int id;
     private String username;
     private String password;
     private List<Role> roles;

@@ -1,5 +1,6 @@
 package pod.tsu.spring.repository.impl;
 
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import org.slf4j.Logger;
@@ -10,10 +11,9 @@ import pod.tsu.spring.repository.UserRepository;
 public class InMemoryUserRepository implements UserRepository {
 
     private final Logger logger = LoggerFactory.getLogger(InMemoryUserRepository.class);
-    private final Set<UserEntity> users;
+    private Set<UserEntity> users = new HashSet<>();
 
-    public InMemoryUserRepository(Set<UserEntity> users) {
-        this.users = users;
+    public InMemoryUserRepository() {
         logger.info("Created");
     }
 

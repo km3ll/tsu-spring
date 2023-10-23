@@ -7,26 +7,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pod.tsu.spring.dto.AuthResponseDto;
+import pod.tsu.spring.dto.LoginRequestDto;
 import pod.tsu.spring.dto.RegisterRequestDto;
 import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthController {
 
     private final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
-    private AuthenticationManager authenticationManager;
-    private PasswordEncoder passwordEncoder;
-    private UserRepository userRepository;
+    private final AuthenticationManager authenticationManager;
+    private final PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
 
     @Autowired
     public AuthController(
@@ -43,10 +48,10 @@ public class AuthController {
     @PostMapping("register")
     public ResponseEntity<AuthResponseDto> register(@RequestBody RegisterRequestDto request) {
         if (userRepository.existsByUsername(request.getUsername())) {
-            AuthResponseDto errorDto = AuthResponseDto.builder()
+            AuthResponseDto responseDto = AuthResponseDto.builder()
                 .message(String.format("Username '%s' already exists", request.getUsername()))
                 .build();
-            return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(responseDto, HttpStatus.BAD_REQUEST);
         }
         UserEntity userEntity = UserEntity.builder()
             .username(request.getUsername())
@@ -54,10 +59,19 @@ public class AuthController {
             .roles(ImmutableList.of(Role.builder().name("USER").build()))
             .build();
         userRepository.save(userEntity);
-        AuthResponseDto successDto = AuthResponseDto.builder()
-            .message(String.format("Username '%s' registered successfully", request.getUsername()))
-            .build();
-        return ResponseEntity.ok(successDto);
+        AuthResponseDto responseDto = AuthResponseDto.builder()
+            .message(String.format("Username '%s' registered successfully", request.getUsername())).build();
+        return ResponseEntity.ok(responseDto);
     }
+
+    @PostMapping("login")
+    public ResponseEntity<AuthResponseDto> login(@RequestBody LoginRequestDto request) {
+        Authentication userToken = new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword());
+        Authentication authentication = authenticationManager.authenticate(userToken);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        AuthResponseDto responseDto = AuthResponseDto.builder().message("User login successful").build();
+        return ResponseEntity.ok(responseDto);
+    }
+
 
 }
