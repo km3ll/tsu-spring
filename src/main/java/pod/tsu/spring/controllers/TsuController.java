@@ -1,5 +1,7 @@
 package pod.tsu.spring.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +15,12 @@ import java.time.format.DateTimeFormatter;
 @RequestMapping("/tsu")
 public class TsuController {
 
+    private final Logger logger = LoggerFactory.getLogger(TsuController.class);
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+
+    public TsuController() {
+        logger.info("Controller instantiated");
+    }
 
     private TsuResponseDto buildResponse(String message) {
         return TsuResponseDto.builder()
