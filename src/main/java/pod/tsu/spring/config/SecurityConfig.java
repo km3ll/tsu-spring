@@ -13,20 +13,26 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import pod.tsu.spring.repository.UserRepository;
-import pod.tsu.spring.repository.impl.InMemoryUserRepository;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import pod.tsu.spring.security.JwtAuthEntryPoint;
+import pod.tsu.spring.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
     private final Logger logger = LoggerFactory.getLogger(SecurityConfig.class);
+
     private final JwtAuthEntryPoint jwtAuthEntryPoint;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
-    public SecurityConfig(JwtAuthEntryPoint jwtAuthEntryPoint) {
+    public SecurityConfig(
+        JwtAuthEntryPoint jwtAuthEntryPoint,
+        JwtAuthenticationFilter jwtAuthenticationFilter
+    ) {
         this.jwtAuthEntryPoint = jwtAuthEntryPoint;
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
         logger.info("Created");
     }
 
@@ -46,6 +52,7 @@ public class SecurityConfig {
             .anyRequest().authenticated()
             .and()
             .httpBasic();
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
@@ -59,11 +66,6 @@ public class SecurityConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public UserRepository userRepository() {
-        return new InMemoryUserRepository();
     }
 
 }

@@ -5,9 +5,11 @@ import java.util.Optional;
 import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
 
+@Repository
 public class InMemoryUserRepository implements UserRepository {
 
     private final Logger logger = LoggerFactory.getLogger(InMemoryUserRepository.class);

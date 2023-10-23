@@ -18,10 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pod.tsu.spring.dto.AuthResponseDto;
 import pod.tsu.spring.dto.LoginRequestDto;
+import pod.tsu.spring.dto.LoginResponseDto;
 import pod.tsu.spring.dto.RegisterRequestDto;
 import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
+import pod.tsu.spring.security.JwtGenerator;
 
 @RestController
 @RequestMapping("/auth")
@@ -32,16 +34,19 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
+    private final JwtGenerator jwtGenerator;
 
     @Autowired
     public AuthController(
         AuthenticationManager authenticationManager,
         PasswordEncoder passwordEncoder,
-        UserRepository userRepository
+        UserRepository userRepository,
+        JwtGenerator jwtGenerator
     ) {
         this.authenticationManager = authenticationManager;
         this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
+        this.jwtGenerator = jwtGenerator;
         logger.info("Created");
     }
 
@@ -65,13 +70,16 @@ public class AuthController {
     }
 
     @PostMapping("login")
-    public ResponseEntity<AuthResponseDto> login(@RequestBody LoginRequestDto request) {
+    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto request) {
+
         Authentication userToken = new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword());
         Authentication authentication = authenticationManager.authenticate(userToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        AuthResponseDto responseDto = AuthResponseDto.builder().message("User login successful").build();
-        return ResponseEntity.ok(responseDto);
-    }
 
+        String token = jwtGenerator.generateToken(authentication);
+        LoginResponseDto responseDto = new LoginResponseDto(token);
+        return ResponseEntity.ok(responseDto);
+
+    }
 
 }

@@ -24,6 +24,7 @@ public class JwtGenerator {
     private final Key key = Keys.hmacShaKeyFor(JWT_SECRET.getBytes(StandardCharsets.UTF_8));
 
     public JwtGenerator() {
+        logger.info("Created");
     }
 
     public String generateToken(Authentication authentication) {
