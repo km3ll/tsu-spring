@@ -30,4 +30,8 @@ public class InMemoryUserRepository implements UserRepository {
             .anyMatch(user -> user.getUsername().equals(username));
     }
 
+    @Override
+    public Boolean save(UserEntity userEntity) {
+        return users.add(userEntity);
+    }
 }

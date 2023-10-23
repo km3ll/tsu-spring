@@ -1,24 +1,22 @@
 package pod.tsu.spring.config;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import java.util.HashSet;
-import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
-import pod.tsu.spring.repository.RoleRepository;
 import pod.tsu.spring.repository.UserRepository;
-import pod.tsu.spring.repository.impl.InMemoryRoleRepository;
 import pod.tsu.spring.repository.impl.InMemoryUserRepository;
 
 @Configuration
@@ -27,6 +25,7 @@ public class SecurityConfig {
 
     private final Logger logger = LoggerFactory.getLogger(SecurityConfig.class);
 
+    @Autowired
     public SecurityConfig() {
         logger.info("Created");
     }
@@ -36,6 +35,8 @@ public class SecurityConfig {
         http
             .csrf().disable()
             .authorizeRequests()
+            .antMatchers("/pod/**" ).permitAll()
+            .antMatchers("/api/auth/**" ).permitAll()
             .anyRequest().authenticated()
             .and()
             .httpBasic();
@@ -43,33 +44,32 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails admin = User.builder()
-            .username("admin")
-            .password("password")
-            .roles("ADMIN")
-            .build();
-        UserDetails user = User.builder()
-            .username("user")
-            .password("password")
-            .roles("USER")
-            .build();
-        return new InMemoryUserDetailsManager(admin, user);
+    public AuthenticationManager authenticationManager(
+        AuthenticationConfiguration authenticationConfiguration
+    ) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
     }
 
     @Bean
-    public RoleRepository roleRepository() {
-        Set<Role> roles = ImmutableSet.of(
-             Role.builder().id(1000).name("ADMIN").build(),
-             Role.builder().id(1001).name("USER").build()
-        );
-        return new InMemoryRoleRepository(roles);
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
     public UserRepository userRepository() {
-        Set<UserEntity> users = new HashSet<>();
-        return new InMemoryUserRepository(users);
+        UserEntity admin = UserEntity.builder()
+            .id(1100)
+            .username("admin")
+            .password("password")
+            .roles(ImmutableList.of(Role.builder().name("ADMIN").build()))
+            .build();
+        UserEntity user = UserEntity.builder()
+            .id(1101)
+            .username("user")
+            .password("password")
+            .roles(ImmutableList.of(Role.builder().name("USER").build()))
+            .build();
+        return new InMemoryUserRepository(ImmutableSet.of(admin, user));
     }
 
 }

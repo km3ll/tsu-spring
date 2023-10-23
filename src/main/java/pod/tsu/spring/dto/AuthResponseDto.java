@@ -1,13 +1,11 @@
 package pod.tsu.spring.dto;
 
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Builder
-@Getter
-@Setter
-public class TsuResponseDto {
+@Data
+public class AuthResponseDto {
 
     private String datetime;
     private String message;

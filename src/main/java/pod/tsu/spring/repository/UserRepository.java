@@ -10,4 +10,6 @@ public interface UserRepository {
 
     Boolean existsByUsername(String username);
 
+    Boolean save(UserEntity userEntity);
+
 }
