@@ -4,7 +4,6 @@
 
 ```bash
 mvn clean compile
-docker run --name tsu-postgres -e POSTGRES_PASSWORD=password -p5432:5432 -d postgres
 ```
 
 ## content
