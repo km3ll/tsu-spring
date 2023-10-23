@@ -15,11 +15,11 @@ import java.time.format.DateTimeFormatter;
 @RequestMapping("/tsu")
 public class TsuController {
 
-    private final Logger logger = LoggerFactory.getLogger(TsuController.class);
+    private static final Logger logger = LoggerFactory.getLogger(TsuController.class);
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
     public TsuController() {
-        logger.info("Controller instantiated");
+        logger.info("Controller created");
     }
 
     private TsuResponseDto buildResponse(String message) {
