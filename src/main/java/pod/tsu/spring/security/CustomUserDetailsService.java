@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
+
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 

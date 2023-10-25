@@ -12,6 +12,15 @@ mvn clean compile
 └─ tsu
 ```
 
+## endpoints
+
+```
+POST /auth/register
+POST /auth/login
+GET  /api/status
+GET  /pod/status
+```
+
 ## references
 
 - Spring Boot Security, by Teddy Smith
