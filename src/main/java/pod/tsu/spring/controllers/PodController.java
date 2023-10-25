@@ -10,6 +10,7 @@ import pod.tsu.spring.dto.PodResponseDto;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 @RestController
 @RequestMapping("/pod")
 public class PodController {
@@ -25,6 +26,7 @@ public class PodController {
             .message(message)
             .build();
     }
+
     @GetMapping("status")
     public ResponseEntity<PodResponseDto> getStatus() {
         return ResponseEntity.ok(buildResponse("UP!"));

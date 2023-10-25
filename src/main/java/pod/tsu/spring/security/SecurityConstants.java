@@ -1,5 +1,7 @@
 package pod.tsu.spring.security;
+
 public class SecurityConstants {
+
     private SecurityConstants() {
     }
 

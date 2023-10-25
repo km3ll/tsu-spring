@@ -21,18 +21,19 @@ import pod.tsu.spring.repository.UserRepository;
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
-
     private final UserRepository userRepository;
 
     private Collection<GrantedAuthority> mapRolesToAuthorities(List<Role> roles) {
         return roles.stream()
             .map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
+
     @Autowired
     public CustomUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
         logger.info("Created");
     }
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity user = userRepository.findByUsername(username)
