@@ -1,4 +1,4 @@
-package pod.tsu.spring.security;
+package pod.tsu.spring.secureapi.security;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import pod.tsu.spring.models.Role;
-import pod.tsu.spring.models.UserEntity;
-import pod.tsu.spring.repository.UserRepository;
+import pod.tsu.spring.secureapi.models.Role;
+import pod.tsu.spring.secureapi.models.UserEntity;
+import pod.tsu.spring.secureapi.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

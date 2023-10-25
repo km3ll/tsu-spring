@@ -1,6 +1,6 @@
-package pod.tsu.spring.repository;
+package pod.tsu.spring.secureapi.repository;
 
-import pod.tsu.spring.models.UserEntity;
+import pod.tsu.spring.secureapi.models.UserEntity;
 
 import java.util.Optional;
 

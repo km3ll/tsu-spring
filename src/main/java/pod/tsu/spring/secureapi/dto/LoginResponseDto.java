@@ -1,4 +1,4 @@
-package pod.tsu.spring.dto;
+package pod.tsu.spring.secureapi.dto;
 
 import lombok.Data;
 

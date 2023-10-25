@@ -1,7 +1,4 @@
-package pod.tsu.spring.security;
-
-import static pod.tsu.spring.security.SecurityConstants.JWT_EXPIRATION;
-import static pod.tsu.spring.security.SecurityConstants.JWT_SECRET;
+package pod.tsu.spring.secureapi.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtParser;
@@ -21,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class JwtGenerator {
 
     private final Logger logger = LoggerFactory.getLogger(JwtGenerator.class);
-    private final Key key = Keys.hmacShaKeyFor(JWT_SECRET.getBytes(StandardCharsets.UTF_8));
+    private final Key key = Keys.hmacShaKeyFor(SecurityConstants.JWT_SECRET.getBytes(StandardCharsets.UTF_8));
 
     public JwtGenerator() {
         logger.info("Created");
@@ -31,7 +28,7 @@ public class JwtGenerator {
 
         String username = authentication.getName();
         Date currentDate = new Date();
-        Date expirationDate = new Date(currentDate.getTime() + JWT_EXPIRATION);
+        Date expirationDate = new Date(currentDate.getTime() + SecurityConstants.JWT_EXPIRATION);
 
         return Jwts.builder()
             .setSubject(username)

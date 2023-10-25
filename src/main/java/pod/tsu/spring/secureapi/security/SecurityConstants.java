@@ -1,4 +1,4 @@
-package pod.tsu.spring.security;
+package pod.tsu.spring.secureapi.security;
 
 public class SecurityConstants {
 

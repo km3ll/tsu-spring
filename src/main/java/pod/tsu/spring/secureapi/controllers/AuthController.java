@@ -1,4 +1,4 @@
-package pod.tsu.spring.controllers;
+package pod.tsu.spring.secureapi.controllers;
 
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pod.tsu.spring.dto.AuthResponseDto;
-import pod.tsu.spring.dto.LoginRequestDto;
-import pod.tsu.spring.dto.LoginResponseDto;
-import pod.tsu.spring.dto.RegisterRequestDto;
-import pod.tsu.spring.models.Role;
-import pod.tsu.spring.models.UserEntity;
-import pod.tsu.spring.repository.UserRepository;
-import pod.tsu.spring.security.JwtGenerator;
+import pod.tsu.spring.secureapi.dto.AuthResponseDto;
+import pod.tsu.spring.secureapi.dto.LoginRequestDto;
+import pod.tsu.spring.secureapi.dto.LoginResponseDto;
+import pod.tsu.spring.secureapi.dto.RegisterRequestDto;
+import pod.tsu.spring.secureapi.models.Role;
+import pod.tsu.spring.secureapi.models.UserEntity;
+import pod.tsu.spring.secureapi.repository.UserRepository;
+import pod.tsu.spring.secureapi.security.JwtGenerator;
 
 @RestController
 @RequestMapping("/auth")

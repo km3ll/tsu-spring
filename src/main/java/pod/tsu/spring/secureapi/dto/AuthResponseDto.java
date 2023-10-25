@@ -1,13 +1,12 @@
-package pod.tsu.spring.dto;
+package pod.tsu.spring.secureapi.dto;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Builder
 @Data
-public class PodResponseDto {
+public class AuthResponseDto {
 
-    private String datetime;
     private String message;
 
 }

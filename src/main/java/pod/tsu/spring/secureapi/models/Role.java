@@ -1,4 +1,4 @@
-package pod.tsu.spring.models;
+package pod.tsu.spring.secureapi.models;
 
 import lombok.Builder;
 import lombok.Getter;

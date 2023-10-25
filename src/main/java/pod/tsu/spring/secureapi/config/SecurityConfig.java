@@ -1,4 +1,4 @@
-package pod.tsu.spring.config;
+package pod.tsu.spring.secureapi.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pod.tsu.spring.security.JwtAuthEntryPoint;
-import pod.tsu.spring.security.JwtAuthenticationFilter;
+import pod.tsu.spring.secureapi.security.JwtAuthEntryPoint;
+import pod.tsu.spring.secureapi.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
