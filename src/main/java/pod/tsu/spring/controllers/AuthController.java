@@ -24,7 +24,6 @@ import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
 import pod.tsu.spring.security.JwtGenerator;
-
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -35,7 +34,6 @@ public class AuthController {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final JwtGenerator jwtGenerator;
-
     @Autowired
     public AuthController(
         AuthenticationManager authenticationManager,
@@ -49,7 +47,6 @@ public class AuthController {
         this.jwtGenerator = jwtGenerator;
         logger.info("Created");
     }
-
     @PostMapping("register")
     public ResponseEntity<AuthResponseDto> register(@RequestBody RegisterRequestDto request) {
         if (userRepository.existsByUsername(request.getUsername())) {
@@ -68,7 +65,6 @@ public class AuthController {
             .message(String.format("Username '%s' registered successfully", request.getUsername())).build();
         return ResponseEntity.ok(responseDto);
     }
-
     @PostMapping("login")
     public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto request) {
 

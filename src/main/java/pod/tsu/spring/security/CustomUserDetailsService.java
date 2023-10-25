@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 import pod.tsu.spring.models.Role;
 import pod.tsu.spring.models.UserEntity;
 import pod.tsu.spring.repository.UserRepository;
-
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -29,13 +28,11 @@ public class CustomUserDetailsService implements UserDetailsService {
         return roles.stream()
             .map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
-
     @Autowired
     public CustomUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
         logger.info("Created");
     }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity user = userRepository.findByUsername(username)
