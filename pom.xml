@@ -13,6 +13,7 @@
     <modules>
         <module>pokemon</module>
         <module>secureapi</module>
+        <module>bookstore</module>
     </modules>
 
     <properties>
