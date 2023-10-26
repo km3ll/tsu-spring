@@ -1,0 +1,476 @@
+2023-10-25 21:02:35.728  INFO 11510 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 11510 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-25 21:02:35.730  INFO 11510 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 21:02:36.095  INFO 11510 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-25 21:02:36.119  INFO 11510 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interfaces.
+2023-10-25 21:02:36.432  INFO 11510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 21:02:36.438  INFO 11510 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 21:02:36.438  INFO 11510 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-25 21:02:36.491  INFO 11510 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 21:02:36.491  INFO 11510 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 732 ms
+2023-10-25 21:02:36.541  WARN 11510 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pokemonController' defined in file [/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/pod/tsu/spring/pokemon/controllers/PokemonController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pokemonServiceImpl' defined in file [/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/pod/tsu/spring/pokemon/service/impl/PokemonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'pokemonRepository': Unsatisfied dependency expressed through method 'setConverter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcConverter' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcConverter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2023-10-25 21:02:36.543  INFO 11510 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-25 21:02:36.552  INFO 11510 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-25 21:02:36.563 ERROR 11510 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2023-10-25 21:05:58.880  INFO 11780 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 11780 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-25 21:05:58.882  INFO 11780 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 21:05:59.202  INFO 11780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-25 21:05:59.225  INFO 11780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JDBC repository interfaces.
+2023-10-25 21:05:59.503  INFO 11780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 21:05:59.509  INFO 11780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 21:05:59.510  INFO 11780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-25 21:05:59.558  INFO 11780 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 21:05:59.558  INFO 11780 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 645 ms
+2023-10-25 21:05:59.569 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-25 21:05:59.583 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-25 21:05:59.585 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-25 21:05:59.585 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-25 21:05:59.585 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-25 21:05:59.586 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-25 21:05:59.587 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-25 21:05:59.587 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-25 21:05:59.587 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-25 21:05:59.587 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-25 21:05:59.587 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-25 21:05:59.588 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-25 21:05:59.589 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-25 21:05:59.590 DEBUG 11780 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-25 21:05:59.591  INFO 11780 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-25 21:05:59.707  INFO 11780 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-25 21:05:59.717  INFO 11780 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-25 21:05:59.779 DEBUG 11780 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:05:59.784 DEBUG 11780 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:05:59.784 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-25 21:05:59.792 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-25 21:05:59.794 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Arbok', 'Poison')
+2023-10-25 21:05:59.795 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Beedrill', 'Bug')
+2023-10-25 21:05:59.795 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Cloyster', 'Water')
+2023-10-25 21:05:59.795 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Ditto', 'Normal')
+2023-10-25 21:05:59.796 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Exeggutor', 'Grass')
+2023-10-25 21:05:59.796 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Flareon', 'Fire')
+2023-10-25 21:05:59.796 DEBUG 11780 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 12 ms.
+2023-10-25 21:05:59.810 DEBUG 11780 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:05:59.920  INFO 11780 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-25 21:05:59.921  INFO 11780 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-25 21:06:00.135  INFO 11780 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 21:06:00.143  INFO 11780 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 1.502 seconds (JVM running for 1.896)
+2023-10-25 21:06:22.609  INFO 11780 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 21:06:22.609  INFO 11780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 21:06:22.610  INFO 11780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-25 21:06:49.008  INFO 11780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown initiated...
+2023-10-25 21:06:49.009  INFO 11780 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown completed.
+2023-10-25 21:07:00.015  INFO 11929 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 11929 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-25 21:07:00.017  INFO 11929 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 21:07:00.381  INFO 11929 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-25 21:07:00.404  INFO 11929 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JDBC repository interfaces.
+2023-10-25 21:07:00.678  INFO 11929 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 21:07:00.684  INFO 11929 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 21:07:00.684  INFO 11929 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-25 21:07:00.728  INFO 11929 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 21:07:00.728  INFO 11929 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2023-10-25 21:07:00.737 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-25 21:07:00.749 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-25 21:07:00.751 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-25 21:07:00.752 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-25 21:07:00.753 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-25 21:07:00.754 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-25 21:07:00.755 DEBUG 11929 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-25 21:07:00.755  INFO 11929 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-25 21:07:00.859  INFO 11929 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-25 21:07:00.866  INFO 11929 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-25 21:07:00.923 DEBUG 11929 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:07:00.927 DEBUG 11929 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:07:00.927 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-25 21:07:00.935 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-25 21:07:00.938 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Arbok', 'Poison')
+2023-10-25 21:07:00.938 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Beedrill', 'Bug')
+2023-10-25 21:07:00.939 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Cloyster', 'Water')
+2023-10-25 21:07:00.939 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Ditto', 'Normal')
+2023-10-25 21:07:00.940 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Exeggutor', 'Grass')
+2023-10-25 21:07:00.940 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name,type) values ('Flareon', 'Fire')
+2023-10-25 21:07:00.940 DEBUG 11929 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 12 ms.
+2023-10-25 21:07:00.962 DEBUG 11929 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:07:01.094  INFO 11929 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-25 21:07:01.094  INFO 11929 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-25 21:07:01.302  INFO 11929 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 21:07:01.309  INFO 11929 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 1.596 seconds (JVM running for 2.003)
+2023-10-25 21:07:31.895  INFO 11929 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 21:07:31.896  INFO 11929 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 21:07:31.896  INFO 11929 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-25 21:07:31.911 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:07:31.912 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:07:31.913 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:07:31.913 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:07:31.938 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:07:31.939 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:07:31.969 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:07:31.969 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:07:31.970 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:07:31.970 DEBUG 11929 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1743236047 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:10:45.264  INFO 11929 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown initiated...
+2023-10-25 21:10:45.265  INFO 11929 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown completed.
+2023-10-25 21:10:51.141  INFO 12277 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 12277 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-25 21:10:51.143  INFO 12277 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 21:10:51.456  INFO 12277 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-25 21:10:51.480  INFO 12277 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JDBC repository interfaces.
+2023-10-25 21:10:51.741  INFO 12277 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 21:10:51.746  INFO 12277 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 21:10:51.747  INFO 12277 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-25 21:10:51.791  INFO 12277 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 21:10:51.791  INFO 12277 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 618 ms
+2023-10-25 21:10:51.800 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-25 21:10:51.812 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-25 21:10:51.813 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-25 21:10:51.814 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-25 21:10:51.815 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-25 21:10:51.816 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-25 21:10:51.817 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-25 21:10:51.817 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-25 21:10:51.817 DEBUG 12277 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-25 21:10:51.817  INFO 12277 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-25 21:10:51.930  INFO 12277 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-25 21:10:51.937  INFO 12277 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-25 21:10:51.989 DEBUG 12277 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:10:51.992 DEBUG 12277 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:10:51.993 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-25 21:10:51.998 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-25 21:10:52.000 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Arbok', 'Poison')
+2023-10-25 21:10:52.000 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Beedrill', 'Bug')
+2023-10-25 21:10:52.000 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Cloyster', 'Water')
+2023-10-25 21:10:52.001 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Ditto', 'Normal')
+2023-10-25 21:10:52.001 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Exeggutor', 'Grass')
+2023-10-25 21:10:52.001 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Flareon', 'Fire')
+2023-10-25 21:10:52.001 DEBUG 12277 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 8 ms.
+2023-10-25 21:10:52.012 DEBUG 12277 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:10:52.126  INFO 12277 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-25 21:10:52.126  INFO 12277 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-25 21:10:52.313  INFO 12277 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 21:10:52.320  INFO 12277 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 1.394 seconds (JVM running for 1.712)
+2023-10-25 21:10:57.252  INFO 12277 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 21:10:57.252  INFO 12277 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 21:10:57.253  INFO 12277 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-25 21:10:57.269 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:10:57.269 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:10:57.270 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:10:57.270 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:10:57.296 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:10:57.296 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:10:57.329 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:10:57.330 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:10:57.330 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:10:57.330 DEBUG 12277 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1049849043 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:10:59.425 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:10:59.426 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:10:59.426 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:10:59.426 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:10:59.426 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:10:59.426 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:10:59.427 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:10:59.427 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:10:59.428 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:10:59.428 DEBUG 12277 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@5695052 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:12:08.775  INFO 12277 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown initiated...
+2023-10-25 21:12:08.777  INFO 12277 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown completed.
+2023-10-25 21:12:13.980  INFO 12460 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 12460 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-25 21:12:13.982  INFO 12460 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-25 21:12:14.305  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-25 21:12:14.330  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interfaces.
+2023-10-25 21:12:14.607  INFO 12460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-25 21:12:14.613  INFO 12460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-25 21:12:14.613  INFO 12460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-25 21:12:14.661  INFO 12460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-25 21:12:14.662  INFO 12460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 650 ms
+2023-10-25 21:12:14.672 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-25 21:12:14.685 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-25 21:12:14.687 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-25 21:12:14.688 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-25 21:12:14.689 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-25 21:12:14.690 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-25 21:12:14.691 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-25 21:12:14.692 DEBUG 12460 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-25 21:12:14.692  INFO 12460 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-25 21:12:14.802  INFO 12460 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-25 21:12:14.809  INFO 12460 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-25 21:12:14.878 DEBUG 12460 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:12:14.887 DEBUG 12460 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:12:14.888 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-25 21:12:14.901 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-25 21:12:14.904 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Arbok', 'Poison')
+2023-10-25 21:12:14.905 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Beedrill', 'Bug')
+2023-10-25 21:12:14.906 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Cloyster', 'Water')
+2023-10-25 21:12:14.906 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Ditto', 'Normal')
+2023-10-25 21:12:14.906 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Exeggutor', 'Grass')
+2023-10-25 21:12:14.907 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Flareon', 'Fire')
+2023-10-25 21:12:14.907 DEBUG 12460 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 19 ms.
+2023-10-25 21:12:14.930 DEBUG 12460 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-25 21:12:15.048  INFO 12460 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-25 21:12:15.049  INFO 12460 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-25 21:12:15.256  INFO 12460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 21:12:15.266  INFO 12460 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 1.506 seconds (JVM running for 1.812)
+2023-10-25 21:12:19.109  INFO 12460 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 21:12:19.109  INFO 12460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-25 21:12:19.110  INFO 12460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-25 21:12:19.128 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:12:19.129 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:12:19.130 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:12:19.130 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:12:19.157 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:12:19.157 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:12:19.194 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:12:19.194 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:19.194 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:19.194 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@397022351 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:12:28.182 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:12:28.182 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:12:28.182 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:12:28.182 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:12:28.188 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:12:28.188 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:12:28.190 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:12:28.190 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:28.191 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:28.191 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1288517786 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:12:31.439 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:12:31.439 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:12:31.439 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:12:31.439 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:12:31.440 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:12:31.440 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:12:31.441 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:12:31.441 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:31.441 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:12:31.441 DEBUG 12460 --- [http-nio-8080-exec-4] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1400970060 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:12:59.285  WARN 12460 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-10-25 21:13:12.922 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:13:12.922 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:13:12.923 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:13:12.923 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:13:12.923 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:13:12.923 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:13:12.924 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:13:12.924 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:13:12.924 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:13:12.924 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@84303960 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:13:12.925 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.delete]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-10-25 21:13:12.925 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@268307240 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:13:12.925 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@268307240 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:13:12.933 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-10-25 21:13:12.934 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [DELETE FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:13:12.936 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:13:12.937 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@268307240 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:13:12.937 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@268307240 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:13:23.140 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:13:23.142 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:13:23.142 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:13:23.143 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:13:23.143 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@633200377 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:13:57.895  WARN 12460 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-10-25 21:14:05.788  WARN 12460 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:14:21.718 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:14:21.719 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:21.719 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:21.719 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:21.719 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1433709332 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:14:21.720 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-10-25 21:14:21.720 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@380643162 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:21.720 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@380643162 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:21.727 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-10-25 21:14:21.727 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE "POKEMON" SET "NAME" = ?, "TYPE" = ? WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:14:21.729 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:21.730 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@380643162 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:21.730 DEBUG 12460 --- [http-nio-8080-exec-10] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@380643162 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:14:29.739 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:14:29.740 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:29.741 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:29.741 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:29.741 DEBUG 12460 --- [http-nio-8080-exec-1] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1074489307 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:14:35.251 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON" WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1001216713 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@818227161 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@818227161 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-10-25 21:14:35.252 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE "POKEMON" SET "NAME" = ?, "TYPE" = ? WHERE "POKEMON"."ID" = ?]
+2023-10-25 21:14:35.253 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:35.253 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@818227161 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:35.253 DEBUG 12460 --- [http-nio-8080-exec-2] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@818227161 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:14:37.417 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:14:37.417 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:14:37.417 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:14:37.417 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:14:37.417 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:14:37.418 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:14:37.418 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:14:37.419 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:37.419 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:14:37.419 DEBUG 12460 --- [http-nio-8080-exec-3] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@1721237569 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:17:57.239 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-10-25 21:17:57.239 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@155832785 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:17:57.239 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@155832785 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:17:57.244 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-10-25 21:17:57.244 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO "POKEMON" ("NAME", "TYPE") VALUES (?, ?)]
+2023-10-25 21:17:57.245 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:17:57.245 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@155832785 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:17:57.246 DEBUG 12460 --- [http-nio-8080-exec-6] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@155832785 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] for JDBC transaction
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.datasource.DataSourceUtils      : Setting JDBC Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] read-only
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] to manual commit
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-10-25 21:18:02.263 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT "POKEMON"."ID" AS "ID", "POKEMON"."TYPE" AS "TYPE", "POKEMON"."NAME" AS "NAME" FROM "POKEMON"]
+2023-10-25 21:18:02.264 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-25 21:18:02.264 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:18:02.265 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA]
+2023-10-25 21:18:02.265 DEBUG 12460 --- [http-nio-8080-exec-7] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@729429054 wrapping conn0: url=jdbc:h2:mem:pokemon_db user=SA] after transaction

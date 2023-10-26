@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +15,9 @@ import java.util.List;
 @Builder
 public class Pokemon {
 
+    @Id
     private int id;
     private String name;
     private String type;
-
-    private List<Review> reviews = new ArrayList<Review>();
 
 }
