@@ -1906,3 +1906,151 @@ insert into pokemon_db.pokemon(name, type) values ('Arbok', 'Poison') [90079-214
 2023-10-27 00:55:09.351  INFO 16051 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-10-27 00:55:09.353  INFO 16051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-10-27 00:55:09.355  INFO 16051 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-27 00:58:21.947  INFO 16608 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 16608 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-27 00:58:21.950  INFO 16608 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-27 00:58:22.431  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-27 00:58:22.459  INFO 16608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-27 00:58:22.752  INFO 16608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-27 00:58:22.759  INFO 16608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-27 00:58:22.759  INFO 16608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-27 00:58:22.812  INFO 16608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-27 00:58:22.813  INFO 16608 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 830 ms
+2023-10-27 00:58:22.823 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-27 00:58:22.836 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-27 00:58:22.838 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-27 00:58:22.838 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-27 00:58:22.838 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-27 00:58:22.839 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-27 00:58:22.840 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-27 00:58:22.841 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-27 00:58:22.842 DEBUG 16608 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-27 00:58:22.843  INFO 16608 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-27 00:58:22.957  INFO 16608 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-27 00:58:22.966  INFO 16608 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-27 00:58:23.008 DEBUG 16608 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-27 00:58:23.012 DEBUG 16608 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-27 00:58:23.012 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-27 00:58:23.018 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-27 00:58:23.020 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Arbok', 'Poison')
+2023-10-27 00:58:23.020 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Beedrill', 'Bug')
+2023-10-27 00:58:23.020 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Cloyster', 'Water')
+2023-10-27 00:58:23.020 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Ditto', 'Normal')
+2023-10-27 00:58:23.021 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Exeggutor', 'Grass')
+2023-10-27 00:58:23.021 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Flareon', 'Fire')
+2023-10-27 00:58:23.021 DEBUG 16608 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 9 ms.
+2023-10-27 00:58:23.074  INFO 16608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-27 00:58:23.100  INFO 16608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-10-27 00:58:23.188  INFO 16608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-27 00:58:23.262  INFO 16608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-27 00:58:23.560  INFO 16608 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-27 00:58:23.565  INFO 16608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-27 00:58:23.713  INFO 16608 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-27 00:58:23.714  INFO 16608 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-27 00:58:23.734  WARN 16608 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-27 00:58:23.945  INFO 16608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-27 00:58:23.952  INFO 16608 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 2.297 seconds (JVM running for 2.708)
+2023-10-27 00:58:32.306  INFO 16608 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-27 00:58:32.308  INFO 16608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown initiated...
+2023-10-27 00:58:32.310  INFO 16608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown completed.
+2023-10-27 00:58:37.755  INFO 16739 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 16739 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-27 00:58:37.757  INFO 16739 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-27 00:58:38.148  INFO 16739 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-27 00:58:38.176  INFO 16739 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2023-10-27 00:58:38.491  INFO 16739 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-27 00:58:38.497  INFO 16739 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-27 00:58:38.497  INFO 16739 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-27 00:58:38.551  INFO 16739 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-27 00:58:38.552  INFO 16739 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 763 ms
+2023-10-27 00:58:38.562 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-27 00:58:38.576 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : pokemon_db - configuration:
+2023-10-27 00:58:38.578 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-27 00:58:38.578 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-27 00:58:38.579 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-27 00:58:38.580 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:pokemon_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-27 00:58:38.581 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"pokemon_db"
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-27 00:58:38.582 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-27 00:58:38.583 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-27 00:58:38.583 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-27 00:58:38.583 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-27 00:58:38.583 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-27 00:58:38.583 DEBUG 16739 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-27 00:58:38.583  INFO 16739 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Starting...
+2023-10-27 00:58:38.706  INFO 16739 --- [main] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Start completed.
+2023-10-27 00:58:38.717  INFO 16739 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:pokemon_db'
+2023-10-27 00:58:38.769 DEBUG 16739 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-27 00:58:38.776 DEBUG 16739 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-27 00:58:38.777 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-27 00:58:38.784 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-27 00:58:38.786 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Arbok', 'Poison')
+2023-10-27 00:58:38.786 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Beedrill', 'Bug')
+2023-10-27 00:58:38.787 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Cloyster', 'Water')
+2023-10-27 00:58:38.787 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Ditto', 'Normal')
+2023-10-27 00:58:38.788 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Exeggutor', 'Grass')
+2023-10-27 00:58:38.788 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Flareon', 'Fire')
+2023-10-27 00:58:38.788 DEBUG 16739 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 11 ms.
+2023-10-27 00:58:38.858  INFO 16739 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-27 00:58:38.884  INFO 16739 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-10-27 00:58:38.998  INFO 16739 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-27 00:58:39.060  INFO 16739 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-27 00:58:39.354  INFO 16739 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-27 00:58:39.359  INFO 16739 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-27 00:58:39.501  INFO 16739 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-27 00:58:39.502  INFO 16739 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-27 00:58:39.518  WARN 16739 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-27 00:58:39.733  INFO 16739 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-27 00:58:39.740  INFO 16739 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 2.288 seconds (JVM running for 2.657)
+2023-10-27 01:03:35.268  INFO 16739 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-27 01:03:35.269  INFO 16739 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown initiated...
+2023-10-27 01:03:35.271  INFO 16739 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : pokemon_db - Shutdown completed.
