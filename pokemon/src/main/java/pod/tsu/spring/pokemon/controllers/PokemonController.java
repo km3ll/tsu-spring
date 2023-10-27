@@ -7,14 +7,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pod.tsu.spring.pokemon.dto.PokemonDto;
-import pod.tsu.spring.pokemon.dto.PokemonResponse;
+import pod.tsu.spring.pokemon.dto.AllPokemonDto;
+import pod.tsu.spring.pokemon.dto.ResponseDto;
 import pod.tsu.spring.pokemon.service.PokemonService;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @RestController
 @RequestMapping("/api/")
 public class PokemonController {
 
     private final Logger logger = LoggerFactory.getLogger(PokemonController.class);
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
     private PokemonService pokemonService;
 
@@ -25,7 +31,7 @@ public class PokemonController {
     }
 
     @GetMapping("pokemon")
-    public ResponseEntity<PokemonResponse> getPokemons() {
+    public ResponseEntity<AllPokemonDto> getPokemons() {
         return ResponseEntity.ok(pokemonService.getAllPokemon());
     }
 
@@ -46,9 +52,13 @@ public class PokemonController {
     }
 
     @DeleteMapping("pokemon/{id}/delete")
-    public ResponseEntity<String> deletePokemon(@PathVariable("id") int pokemonId) {
+    public ResponseEntity<ResponseDto> deletePokemon(@PathVariable("id") int pokemonId) {
         pokemonService.deletePokemonById(pokemonId);
-        return ResponseEntity.ok(String.format("Pokemon with id '%d' was deleted", pokemonId));
+        ResponseDto response = ResponseDto.builder()
+            .message(String.format("Pokemon with id '%d' was deleted", pokemonId))
+            .timestamp(formatter.format(LocalDateTime.now()))
+            .build();
+        return ResponseEntity.ok(response);
     }
 
 }

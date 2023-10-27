@@ -1,13 +1,13 @@
 package pod.tsu.spring.pokemon.service;
 
 import pod.tsu.spring.pokemon.dto.PokemonDto;
-import pod.tsu.spring.pokemon.dto.PokemonResponse;
+import pod.tsu.spring.pokemon.dto.AllPokemonDto;
 
 public interface PokemonService {
 
     PokemonDto createPokemon(PokemonDto pokemonDto);
 
-    PokemonResponse getAllPokemon();
+    AllPokemonDto getAllPokemon();
 
     PokemonDto getPokemonById(int id);
 

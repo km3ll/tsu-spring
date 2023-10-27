@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pod.tsu.spring.pokemon.dto.PokemonDto;
-import pod.tsu.spring.pokemon.dto.PokemonResponse;
+import pod.tsu.spring.pokemon.dto.AllPokemonDto;
 import pod.tsu.spring.pokemon.exceptions.PokemonNotFoundException;
 import pod.tsu.spring.pokemon.models.Pokemon;
 import pod.tsu.spring.pokemon.repository.PokemonRepository;
@@ -58,11 +58,11 @@ public class PokemonServiceImpl implements PokemonService {
     }
 
     @Override
-    public PokemonResponse getAllPokemon() {
+    public AllPokemonDto getAllPokemon() {
         Iterable<Pokemon> pokemons = pokemonRepository.findAll();
         List<PokemonDto> result = new ArrayList<>();
         pokemons.forEach(pokemon -> result.add(mapToDto(pokemon)));
-        PokemonResponse response = new PokemonResponse();
+        AllPokemonDto response = new AllPokemonDto();
         response.setContent(result);
         response.setTotalElements(result.size());
         return response;

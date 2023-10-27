@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "08f29dc6-a9a9-49f1-bac9-afd57a33e94c",
+		"name": "tsu-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30782048"
+	},
+	"item": [
+		{
+			"name": "pokemon",
+			"item": [
+				{
+					"name": "List pokemons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/pokemon",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"pokemon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pokemon by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/pokemon/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create pokemon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Psyduck\",\n    \"type\": \"Water\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/pokemon/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pokemon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Psyduck\",\n    \"type\": \"Watere\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/pokemon/7/update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"7",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pokemon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/pokemon/3/delete",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"pokemon",
+								"3",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookstore",
+			"item": []
+		},
+		{
+			"name": "secureapi",
+			"item": []
+		}
+	]
+}
