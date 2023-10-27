@@ -1,10 +1,7 @@
 # tsu-spring
 
 - [commands](#commands)
-- [modules](#modules)
-  - [bookstore](#bookstore) 
-  - [pokemon](#pokemon) 
-  - [secureapi](#secureapi) 
+- [modules](#modules) 
 - [tutorials](#tutorials)
 - [references](#references)
 
@@ -14,15 +11,11 @@
 mvn clean compile
 ```
 
-### secureapi
+## modules
 
-```
-# endpoints
-POST /auth/register
-POST /auth/login
-GET  /api/status
-GET  /pod/status
-```
+- bookstore
+- pokemon
+- secureapi
 
 ## tutorials
 

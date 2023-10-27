@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class PodResponseDto {
 
-    private String datetime;
     private String message;
+    private String timestamp;
 
 }

@@ -16,20 +16,19 @@ import java.time.format.DateTimeFormatter;
 public class ApiController {
 
     private final Logger logger = LoggerFactory.getLogger(ApiController.class);
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+
     public ApiController() {
         logger.info("Created");
-    }
-    private PodResponseDto buildResponse(String message) {
-        return PodResponseDto.builder()
-            .datetime(dateTimeFormatter.format(LocalDateTime.now()))
-            .message(message)
-            .build();
     }
 
     @GetMapping("status")
     public ResponseEntity<PodResponseDto> getStatus() {
-        return ResponseEntity.ok(buildResponse("UP!"));
+        PodResponseDto response = PodResponseDto.builder()
+            .message("UP!")
+            .timestamp(formatter.format(LocalDateTime.now()))
+            .build();
+        return ResponseEntity.ok(response);
     }
 
 }

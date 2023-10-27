@@ -22,7 +22,7 @@ public class PodController {
     }
     private PodResponseDto buildResponse(String message) {
         return PodResponseDto.builder()
-            .datetime(dateTimeFormatter.format(LocalDateTime.now()))
+            .timestamp(dateTimeFormatter.format(LocalDateTime.now()))
             .message(message)
             .build();
     }
