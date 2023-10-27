@@ -14,18 +14,6 @@
 mvn clean compile
 ```
 
-## modules
-
-### bookstore
-
-```
-GET /api/books
-GET /h2-console
-GET /pod/status
-```
-
-### pokemon
-
 ### secureapi
 
 ```

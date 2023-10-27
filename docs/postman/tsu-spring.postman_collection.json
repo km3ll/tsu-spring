@@ -131,7 +131,13 @@
 					"name": "Delete pokemon",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{host}}/api/pokemon/3/delete",
 							"host": [
@@ -151,11 +157,77 @@
 		},
 		{
 			"name": "bookstore",
-			"item": []
+			"item": [
+				{
+					"name": "Get pod status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/pod/status",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pod",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "secureapi",
 			"item": []
+		},
+		{
+			"name": "h2 console",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/h2-console",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"h2-console"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

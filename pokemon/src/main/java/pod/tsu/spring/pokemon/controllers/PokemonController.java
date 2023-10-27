@@ -20,7 +20,7 @@ import java.time.format.DateTimeFormatter;
 public class PokemonController {
 
     private final Logger logger = LoggerFactory.getLogger(PokemonController.class);
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
     private PokemonService pokemonService;
 
