@@ -302,7 +302,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNjk4Mzc2MjE3LCJleHAiOjE2OTgzNzYyOTd9.InWYO2aT--feq3t-JGsB2r1rO5acv-cEmcNVnC_zFbvy0QSywJygf8byNaTZgRLK",
+								"value": "Bearer ",
 								"type": "text"
 							},
 							{
