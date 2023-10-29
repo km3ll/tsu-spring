@@ -1,7 +1,8 @@
 # tsu-spring
 
 - [commands](#commands)
-- [modules](#modules) 
+- [modules](#modules)
+- [features](#features) 
 - [tutorials](#tutorials)
 - [references](#references)
 
@@ -20,6 +21,10 @@ mvn -pl <module> command
 - bookstore
 - pokemon
 - secureapi
+
+## Features
+
+Spring MVC, Spring JPA, Spring JDBC, Embedded H2-DB, Lombok, DDL Scripts, DML Scripts, Junit5, Test Tags, Mockito.
 
 ## tutorials
 
