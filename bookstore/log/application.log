@@ -436,3 +436,78 @@ This generated password is for development use only. Your security configuration
 2023-10-29 16:33:25.581 DEBUG 21382 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@532068603 wrapping conn0: url=jdbc:h2:mem:bookstore user=SA] after transaction
 2023-10-29 16:33:26.035  INFO 21382 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : bookstore - Shutdown initiated...
 2023-10-29 16:33:26.041  INFO 21382 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : bookstore - Shutdown completed.
+2023-10-29 17:16:13.701  INFO 24509 --- [main] p.tsu.spring.bookstore.BookStoreAppTest  : Starting BookStoreAppTest using Java 17.0.8.1 on balrog with PID 24509 (started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring/bookstore)
+2023-10-29 17:16:13.703  INFO 24509 --- [main] p.tsu.spring.bookstore.BookStoreAppTest  : The following 1 profile is active: "dev"
+2023-10-29 17:16:14.170  INFO 24509 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-29 17:16:14.203  INFO 24509 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JDBC repository interfaces.
+2023-10-29 17:16:14.525 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902
+2023-10-29 17:16:14.564 DEBUG 24509 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 17:16:14.565 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : bookstore - configuration:
+2023-10-29 17:16:14.568 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-29 17:16:14.568 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-29 17:16:14.569 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-29 17:16:14.569 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-29 17:16:14.569 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-29 17:16:14.569 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-29 17:16:14.569 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-29 17:16:14.570 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-29 17:16:14.570 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-29 17:16:14.570 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-29 17:16:14.571 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-29 17:16:14.571 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-29 17:16:14.571 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-29 17:16:14.571 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-29 17:16:14.571 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-29 17:16:14.572 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-29 17:16:14.572 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-29 17:16:14.572 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:bookstore;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-29 17:16:14.572 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-29 17:16:14.573 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-29 17:16:14.573 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-29 17:16:14.573 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-29 17:16:14.573 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-29 17:16:14.573 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-29 17:16:14.574 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-29 17:16:14.574 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-29 17:16:14.574 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"bookstore"
+2023-10-29 17:16:14.574 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-29 17:16:14.574 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-29 17:16:14.575 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-29 17:16:14.575 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-29 17:16:14.575 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-29 17:16:14.575 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-29 17:16:14.575 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-29 17:16:14.576 DEBUG 24509 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-29 17:16:14.576  INFO 24509 --- [main] com.zaxxer.hikari.HikariDataSource       : bookstore - Starting...
+2023-10-29 17:16:14.713  INFO 24509 --- [main] com.zaxxer.hikari.HikariDataSource       : bookstore - Start completed.
+2023-10-29 17:16:14.730 DEBUG 24509 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 17:16:14.730 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/bookstore/target/classes/schema.sql]
+2023-10-29 17:16:14.738 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE book( id int auto_increment, title varchar(255) NOT NULL, pages int NOT NULL, author varchar(255) NOT NULL )
+2023-10-29 17:16:14.738 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/bookstore/target/classes/schema.sql] in 8 ms.
+2023-10-29 17:16:14.739 DEBUG 24509 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 17:16:14.739 DEBUG 24509 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 17:16:14.739 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/bookstore/target/classes/data.sql]
+2023-10-29 17:16:14.742 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into book(title,pages,author) values ('Spring Boot: Up and Running',328,'Mark Heckler')
+2023-10-29 17:16:14.742 DEBUG 24509 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/bookstore/target/classes/data.sql] in 2 ms.
+2023-10-29 17:16:14.789 DEBUG 24509 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 17:16:14.942  INFO 24509 --- [main] p.t.s.b.controller.BookController        : Created
+2023-10-29 17:16:14.945  INFO 24509 --- [main] p.t.s.b.controller.PodController         : Created
+2023-10-29 17:16:15.019  WARN 24509 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3709cd30-e859-4761-a69f-9886a7a3ac79
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-29 17:16:15.166  INFO 24509 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bookstore'
+2023-10-29 17:16:15.456  INFO 24509 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@712cd5d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2094bf3d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c7d7430, org.springframework.security.web.header.HeaderWriterFilter@782fd504, org.springframework.security.web.csrf.CsrfFilter@333398f, org.springframework.security.web.authentication.logout.LogoutFilter@e0d1dc4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e8598d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ed0b4e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79ab97fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b17d8ab, org.springframework.security.web.session.SessionManagementFilter@1b30a54e, org.springframework.security.web.access.ExceptionTranslationFilter@21002393, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@424f02b8]
+2023-10-29 17:16:15.756  INFO 24509 --- [main] p.tsu.spring.bookstore.BookStoreAppTest  : Started BookStoreAppTest in 2.324 seconds (JVM running for 2.976)
+2023-10-29 17:16:15.761 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Creating new transaction with name [org.springframework.data.jdbc.repository.support.SimpleJdbcRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-10-29 17:16:15.761 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Acquired Connection [HikariProxyConnection@532068603 wrapping conn0: url=jdbc:h2:mem:bookstore user=SA] for JDBC transaction
+2023-10-29 17:16:15.762 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Switching JDBC Connection [HikariProxyConnection@532068603 wrapping conn0: url=jdbc:h2:mem:bookstore user=SA] to manual commit
+2023-10-29 17:16:15.805 DEBUG 24509 --- [main] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-10-29 17:16:15.805 DEBUG 24509 --- [main] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO "BOOK" ("AUTHOR", "PAGES", "TITLE") VALUES (?, ?, ?)]
+2023-10-29 17:16:15.826 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Initiating transaction commit
+2023-10-29 17:16:15.826 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Committing JDBC transaction on Connection [HikariProxyConnection@532068603 wrapping conn0: url=jdbc:h2:mem:bookstore user=SA]
+2023-10-29 17:16:15.827 DEBUG 24509 --- [main] o.s.jdbc.support.JdbcTransactionManager  : Releasing JDBC Connection [HikariProxyConnection@532068603 wrapping conn0: url=jdbc:h2:mem:bookstore user=SA] after transaction
+2023-10-29 17:16:16.151  INFO 24509 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : bookstore - Shutdown initiated...
+2023-10-29 17:16:16.154  INFO 24509 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : bookstore - Shutdown completed.
