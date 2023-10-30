@@ -119,3 +119,129 @@
 2023-10-29 18:58:58.110  INFO 33519 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-10-29 18:58:58.110  INFO 33519 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-10-29 18:58:58.110  INFO 33519 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-29 19:09:25.936  INFO 35217 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Starting PokemonApp using Java 17.0.8.1 on balrog with PID 35217 (/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-29 19:09:25.938  INFO 35217 --- [main] pod.tsu.spring.pokemon.PokemonApp        : No active profile set, falling back to 1 default profile: "default"
+2023-10-29 19:09:26.271  INFO 35217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-29 19:09:26.299  INFO 35217 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2023-10-29 19:09:26.575  INFO 35217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-29 19:09:26.581  INFO 35217 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-29 19:09:26.581  INFO 35217 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-29 19:09:26.633  INFO 35217 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-29 19:09:26.634  INFO 35217 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
+2023-10-29 19:09:26.644 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+2023-10-29 19:09:26.657 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : prod_pokemon - configuration:
+2023-10-29 19:09:26.659 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension................................false
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit................................true
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : catalog................................none
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql................................none
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery................................none
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout................................30000
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource................................none
+2023-10-29 19:09:26.660 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName................................none
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI................................none
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties................................{password=<masked>}
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................................"org.h2.Driver"
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName................................none
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties................................{}
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry................................none
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout................................600000
+2023-10-29 19:09:26.661 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout................................1
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries................................false
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl................................jdbc:h2:mem:2c8a6f03-7108-4d90-805d-4e7569529fcb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime................................0
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold................................0
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime................................1800000
+2023-10-29 19:09:26.662 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize................................10
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry................................none
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory................................none
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle................................10
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : password................................<masked>
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : poolName................................"prod_pokemon"
+2023-10-29 19:09:26.663 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly................................false
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans................................false
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor................................none
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : schema................................none
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory................................internal
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation................................default
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : username................................"sa"
+2023-10-29 19:09:26.664 DEBUG 35217 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout................................5000
+2023-10-29 19:09:26.664  INFO 35217 --- [main] com.zaxxer.hikari.HikariDataSource       : prod_pokemon - Starting...
+2023-10-29 19:09:26.782  INFO 35217 --- [main] com.zaxxer.hikari.HikariDataSource       : prod_pokemon - Start completed.
+2023-10-29 19:09:26.790  INFO 35217 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2c8a6f03-7108-4d90-805d-4e7569529fcb'
+2023-10-29 19:09:26.864  INFO 35217 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-29 19:09:26.888  INFO 35217 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-10-29 19:09:26.977  INFO 35217 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-29 19:09:27.047  INFO 35217 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-29 19:09:27.306  INFO 35217 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-29 19:09:27.311  INFO 35217 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-29 19:09:27.516  INFO 35217 --- [main] p.t.s.p.service.impl.PokemonServiceImpl  : Created
+2023-10-29 19:09:27.517  INFO 35217 --- [main] p.t.s.p.controllers.PokemonController    : Created
+2023-10-29 19:09:27.537  WARN 35217 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-29 19:09:27.720 DEBUG 35217 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 19:09:27.720 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql]
+2023-10-29 19:09:27.726 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 0 returned as update count for SQL: CREATE TABLE IF NOT EXISTS pokemon( id int auto_increment, name varchar(255) NOT NULL, type varchar(255) NOT NULL )
+2023-10-29 19:09:27.726 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/schema.sql] in 6 ms.
+2023-10-29 19:09:27.727 DEBUG 35217 --- [main] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2023-10-29 19:09:27.727 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/data.sql]
+2023-10-29 19:09:27.729 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Arbok', 'Poison')
+2023-10-29 19:09:27.729 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Beedrill', 'Bug')
+2023-10-29 19:09:27.729 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Cloyster', 'Water')
+2023-10-29 19:09:27.729 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Ditto', 'Normal')
+2023-10-29 19:09:27.730 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Exeggutor', 'Grass')
+2023-10-29 19:09:27.730 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : 1 returned as update count for SQL: insert into pokemon(name, type) values ('Flareon', 'Fire')
+2023-10-29 19:09:27.730 DEBUG 35217 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/kmell/ideaProjects/km3ll/tsu-spring/pokemon/target/classes/data.sql] in 3 ms.
+2023-10-29 19:09:27.766  INFO 35217 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-29 19:09:27.776  INFO 35217 --- [main] pod.tsu.spring.pokemon.PokemonApp        : Started PokemonApp in 2.071 seconds (JVM running for 2.41)
+2023-10-29 19:09:28.348  INFO 35217 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-29 19:09:28.350  INFO 35217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : prod_pokemon - Shutdown initiated...
+2023-10-29 19:09:28.351  INFO 35217 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : prod_pokemon - Shutdown completed.
+2023-10-29 19:09:35.594  INFO 35336 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Starting SecureApiApp using Java 17.0.8.1 on balrog with PID 35336 (/home/kmell/ideaProjects/km3ll/tsu-spring/secureapi/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-29 19:09:35.596  INFO 35336 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : No active profile set, falling back to 1 default profile: "default"
+2023-10-29 19:09:36.127  INFO 35336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-29 19:09:36.135  INFO 35336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-29 19:09:36.136  INFO 35336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-29 19:09:36.182  INFO 35336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-29 19:09:36.183  INFO 35336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2023-10-29 19:09:36.193  INFO 35336 --- [main] p.t.s.secureapi.security.JwtGenerator    : Created
+2023-10-29 19:09:36.194  INFO 35336 --- [main] p.t.s.s.r.impl.InMemoryUserRepository    : Created
+2023-10-29 19:09:36.195  INFO 35336 --- [main] p.t.s.s.s.CustomUserDetailsService       : Created
+2023-10-29 19:09:36.196  INFO 35336 --- [main] p.t.s.s.s.JwtAuthenticationFilter        : Created
+2023-10-29 19:09:36.269  INFO 35336 --- [main] p.t.s.s.client.impl.BlogClientImpl       : Created
+2023-10-29 19:09:36.270  INFO 35336 --- [main] p.t.s.s.security.JwtAuthEntryPoint       : Created
+2023-10-29 19:09:36.271  INFO 35336 --- [main] p.t.s.secureapi.config.SecurityConfig    : Created
+2023-10-29 19:09:36.273  INFO 35336 --- [main] p.t.s.s.controller.ApiController         : Created
+2023-10-29 19:09:36.304  INFO 35336 --- [main] p.t.s.s.controller.AuthController        : Created
+2023-10-29 19:09:36.306  INFO 35336 --- [main] p.t.s.s.service.impl.BlogServiceImpl     : Created
+2023-10-29 19:09:36.306  INFO 35336 --- [main] p.t.s.s.controller.BlogController        : Created
+2023-10-29 19:09:36.306  INFO 35336 --- [main] p.t.s.s.controller.PodController         : Created
+2023-10-29 19:09:36.371  INFO 35336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48f4713c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f1868c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d4608a6, org.springframework.security.web.header.HeaderWriterFilter@358ab600, org.springframework.security.web.authentication.logout.LogoutFilter@f5b6e78, pod.tsu.spring.secureapi.security.JwtAuthenticationFilter@131ff6fa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6af5bbd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a8a4e0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26c89563, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ba6ec50, org.springframework.security.web.session.SessionManagementFilter@43f9dd56, org.springframework.security.web.access.ExceptionTranslationFilter@9b9a327, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@553bc36c]
+2023-10-29 19:09:36.536  INFO 35336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-29 19:09:36.544  INFO 35336 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Started SecureApiApp in 1.176 seconds (JVM running for 1.475)
+2023-10-29 19:09:43.079  INFO 35336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-29 19:09:43.079  INFO 35336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-29 19:09:43.080  INFO 35336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-29 19:11:17.142  INFO 35526 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Starting SecureApiApp using Java 17.0.8.1 on balrog with PID 35526 (/home/kmell/ideaProjects/km3ll/tsu-spring/secureapi/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-29 19:11:17.144  INFO 35526 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : No active profile set, falling back to 1 default profile: "default"
+2023-10-29 19:11:17.663  INFO 35526 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-29 19:11:17.668  INFO 35526 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-29 19:11:17.668  INFO 35526 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-29 19:11:17.717  INFO 35526 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-29 19:11:17.717  INFO 35526 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2023-10-29 19:11:17.728  INFO 35526 --- [main] p.t.s.secureapi.security.JwtGenerator    : Created
+2023-10-29 19:11:17.729  INFO 35526 --- [main] p.t.s.s.r.impl.InMemoryUserRepository    : Created
+2023-10-29 19:11:17.730  INFO 35526 --- [main] p.t.s.s.s.CustomUserDetailsService       : Created
+2023-10-29 19:11:17.730  INFO 35526 --- [main] p.t.s.s.s.JwtAuthenticationFilter        : Created
+2023-10-29 19:11:17.793  INFO 35526 --- [main] p.t.s.s.client.impl.BlogClientImpl       : Created
+2023-10-29 19:11:17.794  INFO 35526 --- [main] p.t.s.s.security.JwtAuthEntryPoint       : Created
+2023-10-29 19:11:17.795  INFO 35526 --- [main] p.t.s.secureapi.config.SecurityConfig    : Created
+2023-10-29 19:11:17.796  INFO 35526 --- [main] p.t.s.s.controller.ApiController         : Created
+2023-10-29 19:11:17.827  INFO 35526 --- [main] p.t.s.s.controller.AuthController        : Created
+2023-10-29 19:11:17.828  INFO 35526 --- [main] p.t.s.s.service.impl.BlogServiceImpl     : Created
+2023-10-29 19:11:17.828  INFO 35526 --- [main] p.t.s.s.controller.BlogController        : Created
+2023-10-29 19:11:17.829  INFO 35526 --- [main] p.t.s.s.controller.PodController         : Created
+2023-10-29 19:11:17.883  INFO 35526 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b34832b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48f4713c, org.springframework.security.web.context.SecurityContextPersistenceFilter@57cb70be, org.springframework.security.web.header.HeaderWriterFilter@75a0c890, org.springframework.security.web.authentication.logout.LogoutFilter@a4b5ce3, pod.tsu.spring.secureapi.security.JwtAuthenticationFilter@2184b4f4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58437801, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20d87335, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a8a4e0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f1868c9, org.springframework.security.web.session.SessionManagementFilter@1fdca564, org.springframework.security.web.access.ExceptionTranslationFilter@9679750, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ed34ef5]
+2023-10-29 19:11:18.031  INFO 35526 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-29 19:11:18.039  INFO 35526 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Started SecureApiApp in 1.118 seconds (JVM running for 1.426)
+2023-10-29 19:11:23.279  INFO 35526 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-29 19:11:23.279  INFO 35526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-29 19:11:23.280  INFO 35526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
