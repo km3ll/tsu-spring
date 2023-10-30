@@ -1,4 +1,4 @@
-package pod.tsu.spring.secureapi.controllers;
+package pod.tsu.spring.secureapi.controller;
 
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
@@ -19,8 +19,8 @@ import pod.tsu.spring.secureapi.dto.AuthResponseDto;
 import pod.tsu.spring.secureapi.dto.LoginRequestDto;
 import pod.tsu.spring.secureapi.dto.LoginResponseDto;
 import pod.tsu.spring.secureapi.dto.RegisterRequestDto;
-import pod.tsu.spring.secureapi.models.Role;
-import pod.tsu.spring.secureapi.models.UserEntity;
+import pod.tsu.spring.secureapi.model.Role;
+import pod.tsu.spring.secureapi.model.UserEntity;
 import pod.tsu.spring.secureapi.repository.UserRepository;
 import pod.tsu.spring.secureapi.security.JwtGenerator;
 

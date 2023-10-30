@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "08f29dc6-a9a9-49f1-bac9-afd57a33e94c",
+		"_postman_id": "dfa48795-e73f-4513-9e0d-aceccc1935e6",
 		"name": "tsu-spring",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30782048"
@@ -212,117 +212,156 @@
 			"name": "secureapi",
 			"item": [
 				{
-					"name": "User register",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+					"name": "blog",
+					"item": [
+						{
+							"name": "GET all posts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts"
+									]
+								}
 							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\" : \"john\",\n    \"password\" : \"wick\"\n}"
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "User register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"john\",\n    \"password\" : \"wick\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/auth/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "{{host}}/auth/register",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"auth",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "User login",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+						{
+							"name": "User login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"john\",\n    \"password\" : \"wick\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
 							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\" : \"john\",\n    \"password\" : \"wick\"\n}"
+							"response": []
 						},
-						"url": {
-							"raw": "{{host}}/auth/login",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"auth",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get pod status",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/pod/status",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"pod",
-								"status"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get api status",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer ",
-								"type": "text"
+						{
+							"name": "Get api status",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/status",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"status"
+									]
+								}
 							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}/api/status",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"api",
-								"status"
-							]
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "pod",
+					"item": [
+						{
+							"name": "Get pod status",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/pod/status",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"pod",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},

@@ -1,4 +1,4 @@
-package pod.tsu.spring.secureapi.controllers;
+package pod.tsu.spring.secureapi.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,19 +17,18 @@ public class PodController {
 
     private final Logger logger = LoggerFactory.getLogger(PodController.class);
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+
     public PodController() {
         logger.info("Created");
-    }
-    private PodResponseDto buildResponse(String message) {
-        return PodResponseDto.builder()
-            .timestamp(dateTimeFormatter.format(LocalDateTime.now()))
-            .message(message)
-            .build();
     }
 
     @GetMapping("status")
     public ResponseEntity<PodResponseDto> getStatus() {
-        return ResponseEntity.ok(buildResponse("UP!"));
+        PodResponseDto body = PodResponseDto.builder()
+            .timestamp(dateTimeFormatter.format(LocalDateTime.now()))
+            .message("UP!")
+            .build();
+        return ResponseEntity.ok(body);
     }
 
 }

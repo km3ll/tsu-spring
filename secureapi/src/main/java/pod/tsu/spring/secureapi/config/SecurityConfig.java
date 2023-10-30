@@ -48,6 +48,7 @@ public class SecurityConfig {
             .and()
             .authorizeRequests()
             .antMatchers("/pod/**" ).permitAll()
+            .antMatchers("/blog/**" ).permitAll()
             .antMatchers("/auth/**" ).permitAll()
             .anyRequest().authenticated()
             .and()
