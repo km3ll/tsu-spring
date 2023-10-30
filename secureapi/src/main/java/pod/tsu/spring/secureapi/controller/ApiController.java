@@ -1,4 +1,4 @@
-package pod.tsu.spring.secureapi.controllers;
+package pod.tsu.spring.secureapi.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

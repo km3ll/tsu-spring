@@ -3,7 +3,7 @@ package pod.tsu.spring.secureapi.repository.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import pod.tsu.spring.secureapi.models.UserEntity;
+import pod.tsu.spring.secureapi.model.UserEntity;
 import pod.tsu.spring.secureapi.repository.UserRepository;
 
 import java.util.HashSet;

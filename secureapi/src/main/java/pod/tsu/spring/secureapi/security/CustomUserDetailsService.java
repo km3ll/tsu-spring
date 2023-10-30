@@ -10,8 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import pod.tsu.spring.secureapi.models.Role;
-import pod.tsu.spring.secureapi.models.UserEntity;
+import pod.tsu.spring.secureapi.model.Role;
+import pod.tsu.spring.secureapi.model.UserEntity;
 import pod.tsu.spring.secureapi.repository.UserRepository;
 
 import java.util.Collection;
