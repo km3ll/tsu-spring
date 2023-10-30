@@ -245,3 +245,29 @@
 2023-10-29 19:11:23.279  INFO 35526 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-10-29 19:11:23.279  INFO 35526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-10-29 19:11:23.280  INFO 35526 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-29 19:15:38.988  INFO 36253 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Starting SecureApiApp using Java 17.0.8.1 on balrog with PID 36253 (/home/kmell/ideaProjects/km3ll/tsu-spring/secureapi/target/classes started by kmell in /home/kmell/ideaProjects/km3ll/tsu-spring)
+2023-10-29 19:15:38.989  INFO 36253 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : No active profile set, falling back to 1 default profile: "default"
+2023-10-29 19:15:39.533  INFO 36253 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-29 19:15:39.539  INFO 36253 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-29 19:15:39.539  INFO 36253 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-10-29 19:15:39.586  INFO 36253 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-29 19:15:39.587  INFO 36253 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 568 ms
+2023-10-29 19:15:39.597  INFO 36253 --- [main] p.t.s.secureapi.security.JwtGenerator    : Created
+2023-10-29 19:15:39.598  INFO 36253 --- [main] p.t.s.s.r.impl.InMemoryUserRepository    : Created
+2023-10-29 19:15:39.599  INFO 36253 --- [main] p.t.s.s.s.CustomUserDetailsService       : Created
+2023-10-29 19:15:39.599  INFO 36253 --- [main] p.t.s.s.s.JwtAuthenticationFilter        : Created
+2023-10-29 19:15:39.665  INFO 36253 --- [main] p.t.s.s.client.impl.BlogClientImpl       : Created
+2023-10-29 19:15:39.666  INFO 36253 --- [main] p.t.s.s.security.JwtAuthEntryPoint       : Created
+2023-10-29 19:15:39.667  INFO 36253 --- [main] p.t.s.secureapi.config.SecurityConfig    : Created
+2023-10-29 19:15:39.668  INFO 36253 --- [main] p.t.s.s.controller.ApiController         : Created
+2023-10-29 19:15:39.698  INFO 36253 --- [main] p.t.s.s.controller.AuthController        : Created
+2023-10-29 19:15:39.700  INFO 36253 --- [main] p.t.s.s.service.impl.BlogServiceImpl     : Created
+2023-10-29 19:15:39.700  INFO 36253 --- [main] p.t.s.s.controller.BlogController        : Created
+2023-10-29 19:15:39.701  INFO 36253 --- [main] p.t.s.s.controller.PodController         : Created
+2023-10-29 19:15:39.764  INFO 36253 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5399f6c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fe64d23, org.springframework.security.web.context.SecurityContextPersistenceFilter@2abe9173, org.springframework.security.web.header.HeaderWriterFilter@1f03fba0, org.springframework.security.web.authentication.logout.LogoutFilter@63dfada0, pod.tsu.spring.secureapi.security.JwtAuthenticationFilter@131ff6fa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@37b56ac7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fdca564, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43f9dd56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58437801, org.springframework.security.web.session.SessionManagementFilter@32177fa5, org.springframework.security.web.access.ExceptionTranslationFilter@1886991b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@303f1234]
+2023-10-29 19:15:39.937  INFO 36253 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-29 19:15:39.945  INFO 36253 --- [main] pod.tsu.spring.secureapi.SecureApiApp    : Started SecureApiApp in 1.186 seconds (JVM running for 1.492)
+2023-10-29 19:15:42.084  INFO 36253 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-29 19:15:42.085  INFO 36253 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-29 19:15:42.086  INFO 36253 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-29 19:15:42.109  INFO 36253 --- [http-nio-8080-exec-1] p.t.s.s.client.impl.BlogClientImpl       : Getting all posts from: https://jsonplaceholder.typicode.com/posts
