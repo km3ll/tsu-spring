@@ -1,8 +1,8 @@
 # tsu-spring
 
 - [commands](#commands)
-- [modules](#modules)
-- [features](#features) 
+- [features](#features)
+  - [secureapi](#secureapi)
 - [tutorials](#tutorials)
 - [references](#references)
 
@@ -15,15 +15,21 @@ mvn test -Dgroups=IntegrationTest
 mvn -pl <module> command
 ```
 
-## modules
+## features
 
-- bookstore
-- pokemon
-- secureapi
+Spring Boot Web, Lombok, Junit5, AssertJ, Mockito, Instancio.
 
-## Features
+### bookstore
 
-Spring MVC, Spring JPA, Spring JDBC, Embedded H2-DB, Lombok, DDL Scripts, DML Scripts, Junit5, AssertJ, Test Tags, Mockito, Instancio, Arrange-Act-Assert, Given-When-Then
+Spring Boot Security, Spring Data JDBC, H2 Database, DDL Scripts (schema.sql), DML Scripts (data.sql), ConfigurableAppContext, CrudRepository, CommandLineRunner.
+
+### pokemon
+
+Spring Data JPA, H2 Database, DDL Scripts, DML Scripts, TestKit, Generators, FileUtils, TestTags, Arrange-Act-Assert, Given-When-Then
+
+### secureapi
+
+Spring Boot Security, JSON Web Token, AuthEntryPoint, AuthenticationFilter, UserDetails, SecurityFilterChain, AuthenticationManager, PasswordEncoder.
 
 ## tutorials
 
