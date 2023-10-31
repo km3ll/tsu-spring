@@ -41,7 +41,7 @@ public class BlogClientImpl implements BlogClient {
         RequestEntity<Void> requestEntity = new RequestEntity<>(headers, HttpMethod.GET, uri);
         ParameterizedTypeReference<List<BlogPost>> responseType = new ParameterizedTypeReference<List<BlogPost>>(){};
 
-        logger.info("Getting all posts from: " + uri);
+        logger.info("Getting all posts from {}", uri);
         return restTemplate.exchange(requestEntity, responseType).getBody();
 
     }
