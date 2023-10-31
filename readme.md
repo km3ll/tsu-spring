@@ -2,6 +2,8 @@
 
 - [commands](#commands)
 - [features](#features)
+  - [bookstore](#bookstore)
+  - [pokemon](#pokemon)
   - [secureapi](#secureapi)
 - [tutorials](#tutorials)
 - [references](#references)
@@ -25,7 +27,7 @@ Spring Boot Security, Spring Data JDBC, H2 Database, DDL Scripts (schema.sql), D
 
 ### pokemon
 
-Spring Data JPA, H2 Database, DDL Scripts, DML Scripts, TestKit, Generators, FileUtils, TestTags, Arrange-Act-Assert, Given-When-Then
+Spring Data JPA, H2 Database, DDL Scripts, DML Scripts, TestKit, Generators, FileUtils, TestTags, Arrange-Act-Assert, Given-When-Then, DataJpaTest, AutoConfigureTestDatabase, MockitoExtension, AutoConfigureMockMvc, WebMvcTest.
 
 ### secureapi
 
