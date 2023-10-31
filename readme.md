@@ -23,7 +23,7 @@ Spring Boot Web, Lombok, Junit5, AssertJ, Mockito, Instancio.
 
 ### bookstore
 
-Spring Boot Security, Spring Data JDBC, H2 Database, DDL Scripts (schema.sql), DML Scripts (data.sql), ConfigurableAppContext, CrudRepository, CommandLineRunner.
+Spring Boot Security, Spring Data JDBC, H2 Database, DDL Scripts (schema.sql), DML Scripts (data.sql), ConfigurableAppContext, CrudRepository, CommandLineRunner, CommonsRequestLoggingFilter.
 
 ### pokemon
 
