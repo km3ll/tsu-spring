@@ -7,7 +7,7 @@ import java.util.List;
 
 @Builder
 @Data
-public class GetPostsDto {
+public class GetPostsResponseDto {
 
     private String timestamp;
     private List<PostDto> posts;

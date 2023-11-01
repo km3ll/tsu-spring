@@ -21,7 +21,7 @@ import java.util.List;
 public class BlogClientImpl implements BlogClient {
 
     private final Logger logger = LoggerFactory.getLogger(BlogClientImpl.class);
-    private final String baseUrl = "https://jsonplaceholder.typicode.com";
+    private final String baseUrl = "https://jsonplaceholder.typicode.com/posts";
 
     private RestTemplate restTemplate;
 
@@ -34,7 +34,7 @@ public class BlogClientImpl implements BlogClient {
     @Override
     public List<BlogPost> getAllPosts() {
 
-        URI uri = URI.create(baseUrl + "/posts");
+        URI uri = URI.create(baseUrl);
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
 
@@ -46,4 +46,18 @@ public class BlogClientImpl implements BlogClient {
 
     }
 
+    @Override
+    public BlogPost getPostById(int id) {
+
+        URI uri = URI.create(String.format("%s/%s", baseUrl, id));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+
+        RequestEntity<Void> requestEntity = new RequestEntity<>(headers, HttpMethod.GET, uri);
+        ParameterizedTypeReference<BlogPost> responseType = new ParameterizedTypeReference<BlogPost>(){};
+
+        logger.info("Getting post by id from {}", uri);
+        return restTemplate.exchange(requestEntity, responseType).getBody();
+
+    }
 }
