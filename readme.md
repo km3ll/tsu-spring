@@ -19,7 +19,7 @@ mvn -pl <module> command
 
 ## features
 
-Spring Boot Web, Lombok, Junit5, AssertJ, Mockito, Instancio.
+Spring Boot Web, Lombok, Junit5, AssertJ, Mockito, Instancio, Jupiter Params
 
 ### bookstore
 
@@ -31,12 +31,13 @@ Spring Data JPA, H2 Database, DDL Scripts, DML Scripts, TestKit, Generators, Fil
 
 ### secureapi
 
-Spring Boot Security, JSON Web Token, AuthEntryPoint, AuthenticationFilter, UserDetails, SecurityFilterChain, AuthenticationManager, PasswordEncoder.
+Spring Boot Security, JSON Web Token, AuthEntryPoint, AuthenticationFilter, UserDetails, SecurityFilterChain, AuthenticationManager, PasswordEncoder, ParameterizedTest, DisplayName
 
 ## tutorials
 
 - H2 Database Spring Boot by Dan Vega: [youtube](https://www.youtube.com/watch?v=PSrHcCwvfVQ), [github](https://github.com/danvega/h2-demo)
 - Instancio Unit Test Data: [guide](https://www.instancio.org/user-guide/)
+- JUnit5 Parameterized Tests: [guide](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests)
 - Load Initial Data with Spring Boot by Baeldung: [blog](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
 - Mockito Verify Cookbook by Baeldung: [blog](https://www.baeldung.com/mockito-verify)
 - Spring Call REST API by Dan Vega: [youtube](https://www.youtube.com/watch?v=XEtPVm_SL2Q)
