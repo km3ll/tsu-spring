@@ -1,3 +1,6 @@
+log
+target
+.idea
 *.sw?
 .#*
 *#
@@ -7,17 +10,12 @@
 .settings
 bin
 build
-target
 dependency-reduced-pom.xml
 *.sublime-*
 /scratch
 .gradle
 README.html
 *.iml
-.idea
 .mvn
 .logs
-/production/
-/log/
-/bookstore/log/
-/pokemon/log/
+
