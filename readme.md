@@ -8,9 +8,9 @@
 
 ## modules
 
-- bookstore
-- pokemon
-- secureapi
+- [bookstore](bookstore)
+- [pokemon](pokemon)
+- [secureapi](secureapi)
 
 ## commands
 
