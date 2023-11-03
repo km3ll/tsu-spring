@@ -2,7 +2,7 @@
 
 ## model
 
-- Pokemon
+- `Pokemon`
 
 ## features
 

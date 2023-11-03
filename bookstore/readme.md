@@ -2,7 +2,7 @@
 
 ## model
 
-- Book
+- `Book`
 
 ## feature
 

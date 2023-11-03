@@ -2,9 +2,9 @@
 
 ## model
 
-- BlogPost
-- Role
-- UserEntity
+- `BlogPost`
+- `Role`
+- `UserEntity`
 
 ## features
 
