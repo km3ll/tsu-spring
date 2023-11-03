@@ -4,7 +4,7 @@
 
 - `Book`
 
-## feature
+## features
 
 - CommandLineRunner
 - CommonsRequestLoggingFilter
