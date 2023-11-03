@@ -18,3 +18,4 @@ README.html
 .mvn
 .logs
 /production/
+/log/
