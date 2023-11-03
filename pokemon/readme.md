@@ -1,3 +1,23 @@
 # pokemon
 
-Spring Data JPA, H2 Database, DDL Scripts, DML Scripts, TestKit, Generators, FileUtils, TestTags, Arrange-Act-Assert, Given-When-Then, DataJpaTest, AutoConfigureTestDatabase, MockitoExtension, AutoConfigureMockMvc, WebMvcTest.
+## model
+
+- Pokemon
+
+## features
+
+- Arrange-Act-Assert
+- AutoConfigureMockMvc
+- AutoConfigureTestDatabase
+- DataJpaTest
+- DDL Scripts
+- DML Scripts
+- FileUtils
+- Generators
+- Given-When-Then
+- H2 Database
+- MockitoExtension
+- Spring Data JPA
+- TestKit
+- TestTags
+- WebMvcTest

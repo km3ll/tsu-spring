@@ -1,3 +1,20 @@
 # secureapi
 
-Spring Boot Security, JSON Web Token, AuthEntryPoint, AuthenticationFilter, UserDetails, SecurityFilterChain, AuthenticationManager, PasswordEncoder, ParameterizedTest, DisplayName
+## model
+
+- BlogPost
+- Role
+- UserEntity
+
+## features
+
+- AuthenticationFilter
+- AuthenticationManager
+- AuthEntryPoint
+- DisplayName
+- JSON Web Token
+- ParameterizedTest
+- PasswordEncoder
+- SecurityFilterChain
+- Spring Boot Security
+- UserDetails

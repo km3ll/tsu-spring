@@ -3,7 +3,7 @@ package pod.tsu.spring.pokemon.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 
 import java.util.List;
 
