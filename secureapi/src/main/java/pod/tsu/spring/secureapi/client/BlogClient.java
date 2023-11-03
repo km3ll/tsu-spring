@@ -8,4 +8,6 @@ public interface BlogClient {
 
     List<BlogPost> getAllPosts();
 
+    BlogPost getPostById(int id);
+
 }

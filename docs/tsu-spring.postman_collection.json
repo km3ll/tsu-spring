@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "dfa48795-e73f-4513-9e0d-aceccc1935e6",
+		"_postman_id": "d6c16dd4-0b1f-45ef-a375-a671f9807e27",
 		"name": "tsu-spring",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30782048"
@@ -233,6 +233,31 @@
 									"path": [
 										"blog",
 										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET post by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts",
+										"2"
 									]
 								}
 							},

@@ -5,9 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pod.tsu.spring.secureapi.dto.blog.GetPostsDto;
+import pod.tsu.spring.secureapi.dto.blog.GetPostByIdResponseDto;
+import pod.tsu.spring.secureapi.dto.blog.GetPostsResponseDto;
 import pod.tsu.spring.secureapi.dto.blog.PostDto;
 import pod.tsu.spring.secureapi.model.blog.BlogPost;
 import pod.tsu.spring.secureapi.service.BlogService;
@@ -15,7 +17,6 @@ import pod.tsu.spring.secureapi.service.BlogService;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/blog")
@@ -41,15 +42,29 @@ public class BlogController {
     }
 
     @GetMapping("/posts")
-    public ResponseEntity<GetPostsDto> getPosts() {
+    public ResponseEntity<GetPostsResponseDto> getPosts() {
 
         List<PostDto> posts = blogService.listAllPosts().stream()
             .map(this::mapToDto)
             .toList();
 
-        GetPostsDto body = GetPostsDto.builder()
+        GetPostsResponseDto body = GetPostsResponseDto.builder()
             .timestamp(dateTimeFormatter.format(LocalDateTime.now()))
             .posts(posts)
+            .build();
+
+        return ResponseEntity.ok(body);
+
+    }
+
+    @GetMapping("/posts/{id}")
+    public ResponseEntity<GetPostByIdResponseDto> getPostById(@PathVariable int id) {
+
+        PostDto post = mapToDto(blogService.findPostById(id));
+
+        GetPostByIdResponseDto body = GetPostByIdResponseDto.builder()
+            .timestamp(dateTimeFormatter.format(LocalDateTime.now()))
+            .post(post)
             .build();
 
         return ResponseEntity.ok(body);

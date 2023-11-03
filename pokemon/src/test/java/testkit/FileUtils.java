@@ -2,7 +2,7 @@ package testkit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,7 +17,7 @@ public final class FileUtils {
 
     private static final String COMMA_SEPARATOR = ",";
     private static final String HEADER_PREFIX = "#";
-    private static final Logger LOGGER = LoggerFactory.getLogger(FileUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
     public static List<String> readLines(String fileName) {
         List<String> result = new ArrayList<>();
@@ -25,7 +25,7 @@ public final class FileUtils {
             Stream<String> lines = Files.lines(Paths.get(fileName));
             result.addAll(lines.toList()) ;
         } catch (IOException ex) {
-            LOGGER.warn(String.format("Error reading lines from file '%s'", fileName), ex);
+            logger.warn("Error reading lines from file '{}'", fileName, ex);
         }
         return result;
     }
@@ -40,7 +40,7 @@ public final class FileUtils {
                 .build();
             return Optional.of(pokemon);
         } catch (NumberFormatException ex) {
-            LOGGER.warn(String.format("Error reading building pokemon from CSV line '%s'", csvLine), ex);
+            logger.warn("Error reading building pokemon from CSV line '{}'", csvLine, ex);
             return Optional.empty();
         }
     }

@@ -28,4 +28,9 @@ public class BlogServiceImpl implements BlogService {
         return blogClient.getAllPosts();
     }
 
+    @Override
+    public BlogPost findPostById(int id) {
+        return blogClient.getPostById(id);
+    }
+
 }

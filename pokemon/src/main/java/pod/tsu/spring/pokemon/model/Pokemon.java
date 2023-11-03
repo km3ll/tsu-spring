@@ -1,4 +1,4 @@
-package pod.tsu.spring.pokemon.models;
+package pod.tsu.spring.pokemon.model;
 
 import lombok.*;
 

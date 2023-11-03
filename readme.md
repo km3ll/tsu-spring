@@ -1,10 +1,16 @@
 # tsu-spring
 
-- [commands](#commands)
 - [modules](#modules)
-- [features](#features) 
+- [commands](#commands)
+- [features](#features)
 - [tutorials](#tutorials)
 - [references](#references)
+
+## modules
+
+- [bookstore](bookstore)
+- [pokemon](pokemon)
+- [secureapi](secureapi)
 
 ## commands
 
@@ -15,20 +21,21 @@ mvn test -Dgroups=IntegrationTest
 mvn -pl <module> command
 ```
 
-## modules
+## features
 
-- bookstore
-- pokemon
-- secureapi
-
-## Features
-
-Spring MVC, Spring JPA, Spring JDBC, Embedded H2-DB, Lombok, DDL Scripts, DML Scripts, Junit5, AssertJ, Test Tags, Mockito, Instancio, Arrange-Act-Assert, Given-When-Then
+- AssertJ
+- Instancio
+- JUnit5
+- JParams
+- Lombok
+- Mockito
+- Spring Boot Web
 
 ## tutorials
 
 - H2 Database Spring Boot by Dan Vega: [youtube](https://www.youtube.com/watch?v=PSrHcCwvfVQ), [github](https://github.com/danvega/h2-demo)
 - Instancio Unit Test Data: [guide](https://www.instancio.org/user-guide/)
+- JUnit5 Parameterized Tests: [guide](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests)
 - Load Initial Data with Spring Boot by Baeldung: [blog](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
 - Mockito Verify Cookbook by Baeldung: [blog](https://www.baeldung.com/mockito-verify)
 - Spring Call REST API by Dan Vega: [youtube](https://www.youtube.com/watch?v=XEtPVm_SL2Q)

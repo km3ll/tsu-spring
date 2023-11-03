@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import pod.tsu.spring.pokemon.dto.PokemonDto;
 import pod.tsu.spring.pokemon.dto.AllPokemonDto;
 import pod.tsu.spring.pokemon.exceptions.PokemonNotFoundException;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 import pod.tsu.spring.pokemon.repository.PokemonRepository;
 import pod.tsu.spring.pokemon.service.PokemonService;
 

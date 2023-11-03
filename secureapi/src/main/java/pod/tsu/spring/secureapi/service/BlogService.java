@@ -8,4 +8,6 @@ public interface BlogService {
 
     List<BlogPost> listAllPosts();
 
+    BlogPost findPostById(int id);
+
 }
