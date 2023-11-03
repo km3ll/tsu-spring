@@ -25,7 +25,7 @@ mvn -pl <module> command
 
 - AssertJ
 - Instancio
-- Junit5
+- JUnit5
 - JParams
 - Lombok
 - Mockito

@@ -19,3 +19,5 @@ README.html
 .logs
 /production/
 /log/
+/bookstore/log/
+/pokemon/log/
