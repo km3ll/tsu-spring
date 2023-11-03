@@ -3,7 +3,7 @@ package testkit;
 import org.instancio.Random;
 import org.instancio.support.DefaultRandom;
 import pod.tsu.spring.pokemon.dto.PokemonDto;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 
 import java.util.Set;
 

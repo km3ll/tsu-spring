@@ -9,7 +9,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import pod.tsu.spring.pokemon.dto.AllPokemonDto;
 import pod.tsu.spring.pokemon.dto.PokemonDto;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 import pod.tsu.spring.pokemon.repository.PokemonRepository;
 import testkit.Generators;
 

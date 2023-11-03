@@ -2,7 +2,7 @@ package testkit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pod.tsu.spring.pokemon.models.Pokemon;
+import pod.tsu.spring.pokemon.model.Pokemon;
 
 import java.io.IOException;
 import java.nio.file.Files;
