@@ -1,14 +1,169 @@
 {
 	"info": {
-		"_postman_id": "d6c16dd4-0b1f-45ef-a375-a671f9807e27",
+		"_postman_id": "ecdc7300-8b17-4f5b-9863-f89bcf6311e7",
 		"name": "tsu-spring",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30782048"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "pokemon",
 			"item": [
+				{
+					"name": "actuator",
+					"item": [
+						{
+							"name": "beans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/beans",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"beans"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/health",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loggers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/loggers",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"loggers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "metrics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/metrics",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"metrics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "shutdown",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/shutdown",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"shutdown"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "startup",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/actuator/startup",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"actuator",
+										"startup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
 				{
 					"name": "List pokemons",
 					"request": {
