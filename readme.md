@@ -33,11 +33,13 @@ mvn -pl <module> command
 
 ## tutorials
 
+- Configuration Properties in Spring by Baeldung: [blog](https://www.baeldung.com/configuration-properties-in-spring-boot)
 - H2 Database Spring Boot by Dan Vega: [youtube](https://www.youtube.com/watch?v=PSrHcCwvfVQ), [github](https://github.com/danvega/h2-demo)
 - Instancio Unit Test Data: [guide](https://www.instancio.org/user-guide/)
 - JUnit5 Parameterized Tests: [guide](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests)
 - Load Initial Data with Spring Boot by Baeldung: [blog](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
 - Mockito Verify Cookbook by Baeldung: [blog](https://www.baeldung.com/mockito-verify)
+- Scheduled annotation in Spring by Baeldung: [blog](EnableScheduling)
 - Spring Call REST API by Dan Vega: [youtube](https://www.youtube.com/watch?v=XEtPVm_SL2Q)
 - Spring Data @JPA Query by Baeldung: [blog](https://www.baeldung.com/spring-data-jpa-query)
 - Spring Security by Teddy Smith: [youtube](https://www.youtube.com/watch?v=GjN5IauaflY&list=PL82C6-O4XrHe3sDCodw31GjXbwRdCyyuY&index=1), [github](https://github.com/teddysmithdev/pokemon-review-springboot/tree/master)
