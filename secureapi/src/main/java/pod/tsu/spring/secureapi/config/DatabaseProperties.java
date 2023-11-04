@@ -1,4 +1,4 @@
-package pod.tsu.spring.secureapi.config.prop;
+package pod.tsu.spring.secureapi.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
