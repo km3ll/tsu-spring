@@ -6,6 +6,7 @@
 
 ## features
 
+- Actuators
 - Arrange-Act-Assert
 - AutoConfigureMockMvc
 - AutoConfigureTestDatabase
