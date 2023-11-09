@@ -28,6 +28,7 @@ protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/ja
 ## features
 
 - AssertJ
+- GitHub Flows
 - Instancio
 - JUnit5
 - JParams
