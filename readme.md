@@ -48,7 +48,7 @@ protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/ja
 - Parallel Test Execution by Baeldung: [blog](https://www.baeldung.com/junit-5-parallel-tests)
 - Scheduled annotation in Spring by Baeldung: [blog](https://www.baeldung.com/spring-scheduled-tasks)
 - Spring Actuators [blog](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/production-ready-endpoints.html)
-- Spring Access Log Filter: [youtube](SpringBoot Access Log filter for REST API calls)
+- Spring Access Log Filter: [youtube](https://www.youtube.com/watch?v=E060vI9JWaM)
 - Spring Call REST API by Dan Vega: [youtube](https://www.youtube.com/watch?v=XEtPVm_SL2Q)
 - Spring Data @JPA Query by Baeldung: [blog](https://www.baeldung.com/spring-data-jpa-query)
 - Spring Security by Teddy Smith: [youtube](https://www.youtube.com/watch?v=GjN5IauaflY&list=PL82C6-O4XrHe3sDCodw31GjXbwRdCyyuY&index=1), [github](https://github.com/teddysmithdev/pokemon-review-springboot/tree/master)
