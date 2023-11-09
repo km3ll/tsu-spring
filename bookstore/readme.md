@@ -13,6 +13,7 @@
 - DDL Scripts (schema.sql)
 - DML Scripts (data.sql)
 - H2 Database
+- Protobuf
 - Record
 - SecurityFilterChain
 - Spring Boot Security
