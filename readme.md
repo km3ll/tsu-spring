@@ -21,6 +21,7 @@ mvn -Dtests=AllTests test
 mvn -Dtests=Unit test
 mvn -Dtests=Integration test
 mvn -Dtests=Parallel test
+mvn -Dtests=Container test
 
 protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/java author.proto
 ```

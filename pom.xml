@@ -11,9 +11,10 @@
     <name>tsu-spring</name>
 
     <modules>
-        <module>pokemon</module>
-        <module>secureapi</module>
         <module>bookstore</module>
+        <module>pokemon</module>
+        <module>containers</module>
+        <module>secureapi</module>
     </modules>
 
     <properties>
@@ -44,14 +45,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.instancio</groupId>
             <artifactId>instancio-junit</artifactId>
             <version>3.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -66,7 +68,7 @@
         <profile>
             <id>AllTests</id>
             <properties>
-                <tests>Unit,Integration,Parallel</tests>
+                <tests>Unit,Integration,Parallel,Container</tests>
             </properties>
         </profile>
     </profiles>
