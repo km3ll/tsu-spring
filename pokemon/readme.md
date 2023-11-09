@@ -8,9 +8,6 @@
 
 - Actuators
 - Arrange-Act-Assert
-- AutoConfigureMockMvc
-- AutoConfigureTestDatabase
-- DataJpaTest
 - DDL Scripts
 - DML Scripts
 - FileUtils
@@ -20,5 +17,36 @@
 - MockitoExtension
 - Spring Data JPA
 - TestKit
-- TestTags
-- WebMvcTest
+
+## annotations
+
+### application
+
+- `@AllArgsConstructor`
+- `@Autowired`
+- `@Builder`
+- `@ControllerAdvice`
+- `@Data`
+- `@DeleteMapping`
+- `@Entity`
+- `@ExceptionHandler`
+- `@GetMapping`
+- `@NoArgsConstructor`
+- `@PostMapping`
+- `@PutMapping`
+- `@RequestMapping`
+- `@RestController`
+- `@Service`
+- `@SpringBootApplication`
+
+### testing
+
+- `@ActiveProfiles`
+- `@AutoConfigureMockMvc`
+- `@AutoConfigureTestDatabase`
+- `@DataJpaTest`
+- `@ExtendWith`
+- `@SpringBootTest`
+- `@Tag`
+- `@Test`
+- `@WebMvcTest`
