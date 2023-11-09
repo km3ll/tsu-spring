@@ -8,19 +8,55 @@
 
 ## features
 
-- Async
 - AuthenticationFilter
 - AuthenticationManager
 - AuthEntryPoint
-- ConfigurationProperties
-- DisplayName
-- EnableScheduling
 - JSON Web Token
-- ParameterizedTest
+- OncePerRequestFilter
 - PasswordEncoder
-- PostConstruct
-- PreDestroy
-- Scheduled
 - SecurityFilterChain
 - Spring Boot Security
 - UserDetails
+
+## annotations
+
+### application
+
+- `@AllArgsConstructor`
+- `@Async`
+- `@Autowired`
+- `@Bean` 
+- `@Builder`
+- `@Component`
+- `@Configuration`
+- `@ConfigurationProperties`
+- `@Data`
+- `@EnableAsync`
+- `@EnableScheduling`
+- `@EnableWebSecurity`
+- `@Getter`
+- `@GetMapping`
+- `@NoArgsConstructor`
+- `@Order`
+- `@PostConstruct`
+- `@PostMapping`
+- `@PreDestroy`
+- `@Repository`
+- `@RequestMapping`
+- `@RestController`
+- `@Scheduled`
+- `@Service`
+- `@Setter`
+- `@Slf4j`
+- `@SpringBootApplication`
+- `@WebFilter`
+
+### testing
+
+- `@ActiveProfiles`
+- `@DisplayName`
+- `@ParameterizedTest`
+- `@SpringBootApplication`
+- `@Tag`
+- `@Test`
+- `@ValueSource`
