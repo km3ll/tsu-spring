@@ -15,8 +15,10 @@
 
 ```bash
 mvn clean compile
-mvn test -Dgroups=UnitTest
-mvn test -Dgroups=IntegrationTest
+mvn -Dtests=AllTests test
+mvn -Dtests=Unit test
+mvn -Dtests=Integration test
+mvn -Dtests=Parallel test
 mvn -pl <module> command
 
 protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/java author.proto
