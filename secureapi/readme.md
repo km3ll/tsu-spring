@@ -8,6 +8,7 @@
 
 ## features
 
+- ApplicationRunner
 - AuthenticationFilter
 - AuthenticationManager
 - AuthEntryPoint
