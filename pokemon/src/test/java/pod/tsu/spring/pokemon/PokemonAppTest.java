@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@Tag("IntegrationTest")
+@Tag("Integration")
 @ActiveProfiles({"dev"})
 class PokemonAppTest {
 

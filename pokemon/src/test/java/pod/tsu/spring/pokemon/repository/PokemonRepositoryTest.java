@@ -16,7 +16,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
-@Tag("UnitTest")
+@Tag("Unit")
 @ActiveProfiles({"dev"})
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
 public class PokemonRepositoryTest {

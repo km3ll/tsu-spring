@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Tag("UnitTest")
+@Tag("Unit")
 class RoleTest {
 
     @ParameterizedTest

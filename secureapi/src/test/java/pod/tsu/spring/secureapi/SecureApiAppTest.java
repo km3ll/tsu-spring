@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootApplication
-@Tag("IntegrationTest")
+@Tag("Integration")
 @ActiveProfiles({"dev"})
 class SecureApiAppTest {
 

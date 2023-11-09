@@ -30,6 +30,8 @@ jobs:
     - name: Compile
       run: mvn clean compile
     - name: Run unit tests
-      run: mvn test -Dgroups=UnitTest
+      run: mvn -Dtests=Unit test
     - name: Run integration tests
-      run: mvn test -Dgroups=IntegrationTest
+      run: mvn -Dtests=Integration test
+    - name: Run parallel tests
+      run: mvn -Dtests=Parallel test
