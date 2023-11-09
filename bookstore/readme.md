@@ -13,6 +13,7 @@
 - DDL Scripts (schema.sql)
 - DML Scripts (data.sql)
 - H2 Database
+- Parallel Test Execution
 - Protobuf
 - Record
 - SecurityFilterChain

@@ -15,11 +15,12 @@
 
 ```bash
 mvn clean compile
+mvn -pl <module> command
+
 mvn -Dtests=AllTests test
 mvn -Dtests=Unit test
 mvn -Dtests=Integration test
 mvn -Dtests=Parallel test
-mvn -pl <module> command
 
 protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/java author.proto
 ```
@@ -44,6 +45,7 @@ protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/ja
 - Load Initial Data with Spring Boot by Baeldung: [blog](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
 - Log Incoming Requests by Baeldung: [youtube](https://www.baeldung.com/spring-http-logging)
 - Mockito Verify Cookbook by Baeldung: [blog](https://www.baeldung.com/mockito-verify)
+- Parallel Test Execution by Baeldung: [blog](https://www.baeldung.com/junit-5-parallel-tests)
 - Scheduled annotation in Spring by Baeldung: [blog](https://www.baeldung.com/spring-scheduled-tasks)
 - Spring Actuators [blog](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/production-ready-endpoints.html)
 - Spring Access Log Filter: [youtube](SpringBoot Access Log filter for REST API calls)
