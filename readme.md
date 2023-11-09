@@ -47,6 +47,7 @@ protoc -I=bookstore/src/main/resources/protobuf --java_out=bookstore/src/main/ja
 - Log Incoming Requests by Baeldung: [youtube](https://www.baeldung.com/spring-http-logging)
 - Mockito Verify Cookbook by Baeldung: [blog](https://www.baeldung.com/mockito-verify)
 - Parallel Test Execution by Baeldung: [blog](https://www.baeldung.com/junit-5-parallel-tests)
+- Running Logic on Startup by Baeldung: [blog](https://www.baeldung.com/running-setup-logic-on-startup-in-spring)
 - Scheduled annotation in Spring by Baeldung: [blog](https://www.baeldung.com/spring-scheduled-tasks)
 - Spring Actuators [blog](https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/production-ready-endpoints.html)
 - Spring Access Log Filter: [youtube](https://www.youtube.com/watch?v=E060vI9JWaM)
