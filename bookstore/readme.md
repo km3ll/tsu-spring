@@ -13,5 +13,30 @@
 - DDL Scripts (schema.sql)
 - DML Scripts (data.sql)
 - H2 Database
+- Record
+- SecurityFilterChain
 - Spring Boot Security
 - Spring Data JDBC
+
+## annotations
+
+### application
+
+- `@AllArgsConstructor`
+- `@Bean`
+- `@Builder`
+- `@Configuration`
+- `@Data`
+- `@EnableWebSecurity`
+- `@GetMapping`
+- `@NoArgsConstructor`
+- `@RequestMapping`
+- `@RestController`
+- `@SpringBootApplication`
+
+### testing
+
+- `@ActiveProfiles`
+- `@SpringBootTest`
+- `@Tag`
+- `@Test`
