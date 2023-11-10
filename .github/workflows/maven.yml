@@ -35,3 +35,5 @@ jobs:
       run: mvn -Dtests=Integration test
     - name: Run parallel tests
       run: mvn -Dtests=Parallel test
+    - name: Run performance tests
+      run: mvn -Dtests=Performance test
