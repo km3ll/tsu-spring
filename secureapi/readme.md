@@ -1,5 +1,22 @@
 # secureapi
 
+## endpoints
+
+### api
+
+- `POST User register`
+- `POST User login`
+- `GET API status`
+
+### blog
+
+- `GET Blog posts`
+- `GET Blog post by ID`
+
+### pod
+
+- `GET Pod status`
+
 ## model
 
 - `BlogPost`

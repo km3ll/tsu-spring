@@ -1,5 +1,10 @@
 # bookstore
 
+## endpoints
+
+- `GET Pod status`
+- `GET Books`
+
 ## model
 
 - `Book`
