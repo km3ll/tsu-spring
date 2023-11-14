@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d6c16dd4-0b1f-45ef-a375-a671f9807e27",
+		"_postman_id": "67ef8d16-cc9c-4d5f-8c5e-17364f9069b5",
 		"name": "tsu-spring",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30782048"
@@ -10,7 +10,7 @@
 			"name": "bookstore",
 			"item": [
 				{
-					"name": "Get pod status",
+					"name": "Pod status",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -34,7 +34,7 @@
 					"response": []
 				},
 				{
-					"name": "List books",
+					"name": "Books",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -63,7 +63,7 @@
 			"name": "pokemon",
 			"item": [
 				{
-					"name": "List pokemons",
+					"name": "Pokemons",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -87,7 +87,7 @@
 					"response": []
 				},
 				{
-					"name": "Get pokemon by id",
+					"name": "Pokemon by ID",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -112,7 +112,7 @@
 					"response": []
 				},
 				{
-					"name": "Create pokemon",
+					"name": "Pokemon (create)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -146,7 +146,7 @@
 					"response": []
 				},
 				{
-					"name": "Update pokemon",
+					"name": "Pokemon (update)",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -181,7 +181,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete pokemon",
+					"name": "Pokemon by ID",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -211,60 +211,6 @@
 		{
 			"name": "secureapi",
 			"item": [
-				{
-					"name": "blog",
-					"item": [
-						{
-							"name": "GET all posts",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/blog/posts",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"blog",
-										"posts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET post by ID",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/blog/posts/2",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"blog",
-										"posts",
-										"2"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
 				{
 					"name": "api",
 					"item": [
@@ -335,7 +281,7 @@
 							"response": []
 						},
 						{
-							"name": "Get api status",
+							"name": "API status",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -366,10 +312,64 @@
 					]
 				},
 				{
+					"name": "blog",
+					"item": [
+						{
+							"name": "Blog posts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Blog post by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "pod",
 					"item": [
 						{
-							"name": "Get pod status",
+							"name": "Pod status",
 							"request": {
 								"method": "GET",
 								"header": [],
