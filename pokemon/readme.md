@@ -4,8 +4,8 @@
 
 - `GET Pokemons`
 - `GET Pokemon by ID`
-- `POST Pokemon`
-- `PUT Pokemon`
+- `POST Pokemon (create)`
+- `PUT Pokemon (update)`
 - `DEL Pokemon by ID`
 
 ## model
