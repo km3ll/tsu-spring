@@ -1,5 +1,13 @@
 # pokemon
 
+## endpoints
+
+- `GET Pokemons`
+- `GET Pokemon by ID`
+- `POST Pokemon (create)`
+- `PUT Pokemon (update)`
+- `DEL Pokemon by ID`
+
 ## model
 
 - `Pokemon`

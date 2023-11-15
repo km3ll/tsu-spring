@@ -1,171 +1,69 @@
 {
 	"info": {
-		"_postman_id": "ecdc7300-8b17-4f5b-9863-f89bcf6311e7",
+		"_postman_id": "67ef8d16-cc9c-4d5f-8c5e-17364f9069b5",
 		"name": "tsu-spring",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30782048"
 	},
 	"item": [
+		{
+			"name": "bookstore",
+			"item": [
+				{
+					"name": "Pod status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/pod/status",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"pod",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/books",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "pokemon",
 			"item": [
 				{
-					"name": "actuator",
-					"item": [
-						{
-							"name": "beans",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"type": "text",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/beans",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"beans"
-									],
-									"query": [
-										{
-											"key": "",
-											"value": null,
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "health",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/health",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"health"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "loggers",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/loggers",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"loggers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "metrics",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/metrics",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"metrics"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "shutdown",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/shutdown",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"shutdown"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "startup",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"type": "text",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/actuator/startup",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"actuator",
-										"startup"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "List pokemons",
+					"name": "Pokemons",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -189,7 +87,7 @@
 					"response": []
 				},
 				{
-					"name": "Get pokemon by id",
+					"name": "Pokemon by ID",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -214,7 +112,7 @@
 					"response": []
 				},
 				{
-					"name": "Create pokemon",
+					"name": "Pokemon (create)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -248,7 +146,7 @@
 					"response": []
 				},
 				{
-					"name": "Update pokemon",
+					"name": "Pokemon (update)",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -283,7 +181,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete pokemon",
+					"name": "Pokemon by ID",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -311,115 +209,8 @@
 			]
 		},
 		{
-			"name": "bookstore",
-			"item": [
-				{
-					"name": "Get pod status",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}/pod/status",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"pod",
-								"status"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List books",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}/api/books",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"api",
-								"books"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "secureapi",
 			"item": [
-				{
-					"name": "blog",
-					"item": [
-						{
-							"name": "GET all posts",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/blog/posts",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"blog",
-										"posts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET post by ID",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}/blog/posts/2",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"blog",
-										"posts",
-										"2"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
 				{
 					"name": "api",
 					"item": [
@@ -490,7 +281,7 @@
 							"response": []
 						},
 						{
-							"name": "Get api status",
+							"name": "API status",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -521,10 +312,64 @@
 					]
 				},
 				{
+					"name": "blog",
+					"item": [
+						{
+							"name": "Blog posts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Blog post by ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/blog/posts/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"blog",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "pod",
 					"item": [
 						{
-							"name": "Get pod status",
+							"name": "Pod status",
 							"request": {
 								"method": "GET",
 								"header": [],
