@@ -22,18 +22,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class ContainerServerTest {
 
-    private static final String cassandraName = "cassandra:3.11.2";
-    private static final String kafkaName = "confluentinc/cp-kafka:5.4.3";
-    private static final String rabbitMQName = "rabbitmq:latest";
+    @Container
+    private static final CassandraContainer cassandra =
+        new CassandraContainer(DockerImageName.parse("cassandra:3.11.2"));
 
     @Container
-    private static final CassandraContainer cassandra = new CassandraContainer(DockerImageName.parse(cassandraName));
+    private static final KafkaContainer kafka =
+        new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:5.4.3"));
 
     @Container
-    private static final KafkaContainer kafka = new KafkaContainer(DockerImageName.parse(kafkaName));
-
-    @Container
-    private static final RabbitMQContainer rabbitMQ = new RabbitMQContainer(DockerImageName.parse(rabbitMQName));
+    private static final RabbitMQContainer rabbitMQ =
+        new RabbitMQContainer(DockerImageName.parse("rabbitmq:latest"));
 
     @DynamicPropertySource
     public static void overrideProps(DynamicPropertyRegistry registry) {

@@ -3,6 +3,9 @@
 ## features
 
 - Test Containers
+  - Cassandra
+  - Kafka
+  - RabbitMQ
 
 ## annotations
 
