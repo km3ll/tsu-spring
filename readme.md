@@ -8,6 +8,7 @@
 ## modules
 
 - [bookstore](bookstore)
+- [containers](containers)
 - [pokemon](pokemon)
 - [secureapi](secureapi)
 
