@@ -9,8 +9,6 @@
 name: TSU Pod 153
 
 on:
-  push:
-    branches: [ "feature/tsu-pods" ]
   pull_request:
     branches: [ "main" ]
 
