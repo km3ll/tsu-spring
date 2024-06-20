@@ -50,6 +50,37 @@ jobs:
       run: |
         mvn -Dtests=Integration test
 
+  app-pokemon:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Clean Compile
+      working-directory: ./app-pokemon
+      run: |
+        mvn clean compile
+
+    - name: Unit Tests
+      working-directory: ./app-pokemon
+      run: |
+        mvn -Dtests=Unit test
+
+    - name: Integration Tests
+      working-directory: ./app-pokemon
+      run: |
+        mvn -Dtests=Integration test
+
   test-containers:
   
     runs-on: ubuntu-latest
