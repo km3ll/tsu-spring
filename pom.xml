@@ -11,9 +11,7 @@
     <name>tsu-spring</name>
 
     <modules>
-        <module>bookstore</module>
         <module>pokemon</module>
-        <module>containers</module>
         <module>secureapi</module>
     </modules>
 
