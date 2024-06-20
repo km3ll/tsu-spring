@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.times;
 
-@Tag("Test")
+@Tag("Unit")
 @ExtendWith(MockitoExtension.class)
 class PokemonServiceImplTest {
 

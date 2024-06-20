@@ -1,20 +1,18 @@
-# app-bookstore
+# app-pokemon
 
 ## features
 
-- CommandLineRunner
-- CommonsRequestLoggingFilter
-- ConfigurableAppContext
-- CrudRepository
-- DDL Scripts (schema.sql)
-- DML Scripts (data.sql)
+- Actuators
+- Arrange-Act-Assert
+- DDL Scripts
+- DML Scripts
+- FileUtils
+- Generators
+- Given-When-Then
 - H2 Database
-- Parallel Test Execution
-- Protobuf
-- Record
-- SecurityFilterChain
-- Spring Boot Security
-- Spring Data JDBC
+- MockitoExtension
+- Spring Data JPA
+- TestKit
 
 ## commands
 
@@ -22,9 +20,6 @@
 mvn clean compile
 mvn -Dtests=Unit test
 mvn -Dtests=Integration test
-mvn -Dtests=Parallel test
-
-protoc -I=app-bookstore/src/main/resources/protobuf --java_out=app-bookstore/src/main/java author.proto
 ```
 
 ## tutorials
