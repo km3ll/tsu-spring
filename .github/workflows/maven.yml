@@ -13,6 +13,43 @@ on:
     branches: [ "main" ]
 
 jobs:
+
+  app-bookstore:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Clean Compile
+      working-directory: ./app-bookstore
+      run: |
+        mvn clean compile
+
+    - name: Unit Tests
+      working-directory: ./app-bookstore
+      run: |
+        mvn -Dtests=Unit test
+
+    - name: Parallel Tests
+      working-directory: ./app-bookstore
+      run: |
+        mvn -Dtests=Parallel test
+
+    - name: Integration Tests
+      working-directory: ./app-bookstore
+      run: |
+        mvn -Dtests=Integration test
+
   test-containers:
   
     runs-on: ubuntu-latest
@@ -29,7 +66,12 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Test
+    - name: Clean Compile
+      working-directory: ./test-containers
+      run: |
+        mvn clean compile
+
+    - name: Integration Tests
       working-directory: ./test-containers
       run: |
         mvn clean
