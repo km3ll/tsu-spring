@@ -30,4 +30,5 @@ public class ProjectServiceImplSetterInjection implements IProjectService {
     public IProjectRepository getprojectRepository() {
         return projectRepository;
     }
+
 }
