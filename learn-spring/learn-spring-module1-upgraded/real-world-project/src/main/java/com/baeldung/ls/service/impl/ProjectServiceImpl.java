@@ -12,13 +12,12 @@ import com.baeldung.ls.service.IProjectService;
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
-    @Autowired
     private IProjectRepository projectRepository;
 
     public ProjectServiceImpl() {
     }
 
-    public ProjectServiceImpl(IProjectRepository projectRepository) {
+    public ProjectServiceImpl(@Autowired IProjectRepository projectRepository) {
         this.projectRepository = projectRepository;
     }
 
