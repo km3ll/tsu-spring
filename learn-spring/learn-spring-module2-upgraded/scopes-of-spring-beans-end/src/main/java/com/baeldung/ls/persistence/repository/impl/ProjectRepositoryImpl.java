@@ -2,6 +2,8 @@ package com.baeldung.ls.persistence.repository.impl;
 
 import com.baeldung.ls.persistence.model.Project;
 import com.baeldung.ls.persistence.repository.IProjectRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,12 @@ import java.util.Optional;
 
 //@Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ProjectRepositoryImpl.class);
+
+    public ProjectRepositoryImpl() {
+        LOGGER.info("ProjectRepositoryImpl initialized");
+    }
 
     private List<Project> projects = new ArrayList<>();
 
