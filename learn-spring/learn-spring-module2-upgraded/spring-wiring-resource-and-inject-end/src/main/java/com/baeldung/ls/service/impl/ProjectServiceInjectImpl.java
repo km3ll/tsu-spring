@@ -15,6 +15,7 @@ import com.baeldung.ls.service.IProjectService;
 
 @Service
 public class ProjectServiceInjectImpl implements IProjectService {
+
     private static final Logger LOG = LoggerFactory.getLogger(ProjectServiceInjectImpl.class);
     private IProjectRepository projectRepository;
 

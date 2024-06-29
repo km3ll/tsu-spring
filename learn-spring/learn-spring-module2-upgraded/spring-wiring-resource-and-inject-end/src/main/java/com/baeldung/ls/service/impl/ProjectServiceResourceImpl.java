@@ -14,6 +14,7 @@ import com.baeldung.ls.service.IProjectService;
 
 @Service
 public class ProjectServiceResourceImpl implements IProjectService {
+
     private static final Logger LOG = LoggerFactory.getLogger(ProjectServiceResourceImpl.class);
     private IProjectRepository projectRepository;
 
@@ -32,4 +33,5 @@ public class ProjectServiceResourceImpl implements IProjectService {
         this.projectRepository = projectRepository;
         LOG.info("wired projectRepository instance: {}", projectRepository);
     }
+
 }
