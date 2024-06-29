@@ -12,7 +12,7 @@ public class BeanA {
 
     @PostConstruct
     public void post() {
-        LOG.info("value of the property foo is: {}", this.foo);
+        LOG.info("PostConstruct: value of the property foo is: {}", this.foo);
     }
 
     public String getFoo() {
@@ -22,4 +22,5 @@ public class BeanA {
     public void setFoo(String foo) {
         this.foo = foo;
     }
+
 }

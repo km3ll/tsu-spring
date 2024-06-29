@@ -15,4 +15,5 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
         bd.getPropertyValues()
             .add("foo", "bar");
     }
+
 }

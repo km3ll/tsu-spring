@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
+
     private static final Logger LOG = LoggerFactory.getLogger(MyBeanPostProcessor.class);
 
     @Override
@@ -27,4 +28,5 @@ public class MyBeanPostProcessor implements BeanPostProcessor, Ordered {
     public int getOrder() {
         return 1;
     }
+
 }
