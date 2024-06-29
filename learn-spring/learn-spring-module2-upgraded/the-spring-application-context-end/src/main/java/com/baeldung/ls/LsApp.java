@@ -12,21 +12,24 @@ public class LsApp {
     private static final Logger LOG = LoggerFactory.getLogger(LsApp.class);
 
     public static void main(final String... args) {
+
         SpringApplication.run(LsApp.class, args);
+
+        LOG.info("> Creating a new context");
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.baeldung.ls.persistence.repository");
         ctx.scan("com.baeldung.ls.service");
 
-        LOG.info("context created with id {}", ctx.getId());
+        LOG.info("> Context created with id {}", ctx.getId());
 
         IProjectService projectService = ctx.getBean("projectServiceImpl", IProjectService.class);
 
-        LOG.info("{}", projectService.findById(1L));
+        LOG.info("> Finding project with ID = 1");
+        LOG.info("> {}", projectService.findById(1L));
 
-        LOG.info("Context active before close: {}", ctx.isActive());
-
+        LOG.info("> Context active before close: {}", ctx.isActive());
         ctx.close();
+        LOG.info("> Context active after close: {}", ctx.isActive());
 
-        LOG.info("Context active after close: {}", ctx.isActive());
     }
 }
