@@ -26,4 +26,5 @@ public class LsApp {
         Project project = new Project("My First Project", LocalDate.now());
         projectService.save(project);
     }
+
 }
