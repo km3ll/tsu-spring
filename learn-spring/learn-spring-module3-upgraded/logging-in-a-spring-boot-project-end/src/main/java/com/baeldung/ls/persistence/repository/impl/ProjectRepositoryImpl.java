@@ -20,7 +20,7 @@ public class ProjectRepositoryImpl implements IProjectRepository {
 
     @Override
     public Optional<Project> findById(Long id) {
-        LOG.trace("Project Repository >> Finding Project By Id {}", id);
+        LOG.trace(">> Finding Project By ID {}", id);
         return projects.stream()
             .filter(p -> p.getId().equals(id))
             .findFirst();
@@ -28,7 +28,7 @@ public class ProjectRepositoryImpl implements IProjectRepository {
 
     @Override
     public Project save(Project project) {
-        LOG.trace("Project Repository >> Saving Project", project);
+        LOG.trace(">> Saving Project {}", project);
         Project existingProject = findById(project.getId()).orElse(null);
         if (existingProject == null) {
             projects.add(project);

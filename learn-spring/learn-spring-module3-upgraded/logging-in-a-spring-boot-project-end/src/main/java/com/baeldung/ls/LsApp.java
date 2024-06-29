@@ -24,10 +24,12 @@ public class LsApp {
 
     @PostConstruct
     public void postConstruct() {
+
         Project project = new Project("My First Project", LocalDate.now());
         projectService.save(project);
 
         Optional<Project> optionalProject = projectService.findById(project.getId());
         optionalProject.ifPresent(System.out::println);
     }
+
 }

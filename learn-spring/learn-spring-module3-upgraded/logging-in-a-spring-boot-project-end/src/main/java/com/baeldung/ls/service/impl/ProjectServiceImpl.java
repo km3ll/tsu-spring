@@ -23,13 +23,13 @@ public class ProjectServiceImpl implements IProjectService {
 
     @Override
     public Optional<Project> findById(Long id) {
-        LOG.debug("Project Service >> Finding Project By Id {}", id);
+        LOG.debug(">> Finding Project By ID {}", id);
         return projectRepository.findById(id);
     }
 
     @Override
     public Project save(Project project) {
-        LOG.debug("Project Service >> Saving Project", project);
+        LOG.debug(">> Saving Project {}", project);
         return projectRepository.save(project);
     }
 
