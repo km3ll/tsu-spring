@@ -19,6 +19,7 @@ public class TaskRepositoryIntegrationTest {
 
     @Test
     public void givenProjectCreated_whenFindByTaskNameMatches_thenSuccess() {
+
         Task task1 = new Task("Low Priority Task", "Low Priority Task", LocalDate.now(), LocalDate.now());
         Task task2 = new Task("Low Priority Task", "Low Priority Task", LocalDate.now(), LocalDate.now());
         Task task3 = new Task("High Priority Task", "High Priority Task", LocalDate.now(), LocalDate.now());
@@ -30,8 +31,8 @@ public class TaskRepositoryIntegrationTest {
         taskRepository.save(task4);
 
         List<Task> retreivedTasks = taskRepository.findByNameMatches("High");
-
         assertThat(retreivedTasks)
                 .contains(task3, task4);
     }
+
 }

@@ -66,4 +66,5 @@ public class ProjectRepositoryIntegrationTest {
 
         assertThat(retreivedProjects).contains(newProject, newProject2);
     }
+
 }
