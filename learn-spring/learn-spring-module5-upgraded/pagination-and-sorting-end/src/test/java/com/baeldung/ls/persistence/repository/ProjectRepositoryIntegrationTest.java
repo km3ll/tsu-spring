@@ -36,7 +36,7 @@ public class ProjectRepositoryIntegrationTest {
         List<Project> retrievedProjects = (List<Project>) projectRepository.findAll(Sort.by(Order.asc("name")));
 
         List<Project> sortedProjects = retrievedProjects
-                .stream()
+            .stream()
             .collect(Collectors.toList());
         sortedProjects.sort(Comparator.comparing(Project::getName));
 
@@ -52,4 +52,5 @@ public class ProjectRepositoryIntegrationTest {
 
         assertThat(projectList).hasSize(2);
     }
+
 }
