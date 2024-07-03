@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "55eefbd6-9760-43c4-af02-96fc27dbddd0",
+		"name": "Learn Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Module 6",
+			"item": [
+				{
+					"name": "Projects API",
+					"item": [
+						{
+							"name": "GET Project By ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/projects/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"projects",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Project",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Project 159\",\n    \"dateCreated\": \"2024-06-19\",\n    \"tass\": []\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/projects",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"projects"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
