@@ -23,7 +23,6 @@ public class ProjectRepositoryIntegrationTest {
     @Test
     public void whenSavingNewProject_thenSuccess() {
         Project newProject = new Project(randomAlphabetic(6), LocalDate.now());
-
         assertNotNull(projectRepository.save(newProject));
     }
 
@@ -31,9 +30,7 @@ public class ProjectRepositoryIntegrationTest {
     public void givenProject_whenFindById_thenSuccess() {
         Project newProject = new Project(randomAlphabetic(6), LocalDate.now());
         newProject = projectRepository.save(newProject);
-
         Optional<Project> retreivedProject = projectRepository.findById(newProject.getId());
-
         assertEquals(retreivedProject.get(), newProject);
     }
 
@@ -42,4 +39,5 @@ public class ProjectRepositoryIntegrationTest {
         Optional<Project> retreivedProject = projectRepository.findById(99L);
         assertThat(retreivedProject).isEmpty();
     }
+
 }

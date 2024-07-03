@@ -20,4 +20,5 @@ public class ProjectServiceIntegrationTest {
     public void whenContextIsLoaded2_thenNoExceptions() {
         System.out.println();
     }
+
 }
