@@ -9,4 +9,5 @@ public class LsApp {
     public static void main(final String... args) {
         SpringApplication.run(new Class[] { LsApp.class }, args);
     }
+
 }
