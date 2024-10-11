@@ -30,6 +30,9 @@ public class CityController {
         if (!id.equals(city.getId())) {
             return ResponseEntity.badRequest().body(new ResponseDto("City id mismatch"));
         }
+        if (!cityRepository.existsById(id)) {
+            return ResponseEntity.badRequest().body(new ResponseDto("City not found"));
+        }
         cityRepository.save(city);
         return ResponseEntity.ok(new ResponseDto("City updated"));
     }
@@ -49,6 +52,9 @@ public class CityController {
 
     @DeleteMapping("city/{id}")
     public ResponseEntity<ResponseDto> deleteById(@PathVariable("id") Long id) {
+        if (!cityRepository.existsById(id)) {
+            return ResponseEntity.badRequest().body(new ResponseDto("City not found"));
+        }
         cityRepository.deleteById(id);
         return ResponseEntity.ok(new ResponseDto("City deleted"));
     }

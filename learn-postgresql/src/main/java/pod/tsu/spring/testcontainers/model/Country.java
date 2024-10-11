@@ -17,20 +17,17 @@ import javax.persistence.Table;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = City.TABLE_NAME)
-public class City {
+@Table(name = Country.TABLE_NAME)
+public class Country {
 
-    public static final String TABLE_NAME = "cities";
+    public static final String TABLE_NAME = "countries";
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "city_code")
-    private String code;
-
-    @Column(name = "city_name")
+    @Column(name = "country_name")
     private String name;
 
 }
