@@ -1,0 +1,1 @@
+insert into customers( id, name ) values ( 1100, 'John Wick' );
