@@ -21,7 +21,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"code\": \"MED\",\n    \"name\": \"Medellin\"\n}"
+							"raw": "{\n    \"code\": \"MED\",\n    \"name\": \"Medellin\",\n    \"countryId\": 1\n}"
 						},
 						"url": {
 							"raw": "localhost:8080/api/city",
@@ -50,7 +50,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"code\": \"MED\",\n    \"name\": \"Medallo\"\n}"
+							"raw": "{\n    \"city_id\": 1,\n    \"code\": \"MED\",\n    \"name\": \"Medallo\",\n    \"countryId\": 1\n}"
 						},
 						"url": {
 							"raw": "localhost:8080/api/city/1",
@@ -191,7 +191,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"name\": \"Colombio\"\n}"
+							"raw": "{\n    \"country_id\": 1,\n    \"name\": \"Colombio\"\n}"
 						},
 						"url": {
 							"raw": "localhost:8080/api/country/1",
