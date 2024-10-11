@@ -10,10 +10,12 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "customers")
+@Table(name = Customer.TABLE_NAME)
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
+
+    public static final String TABLE_NAME = "customers";
 
     @Id
     private Long id;
