@@ -1,0 +1,16 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: learn-postgresql
+    version: '@project.version@'
+spring:
+  profiles:
+    active: dev
