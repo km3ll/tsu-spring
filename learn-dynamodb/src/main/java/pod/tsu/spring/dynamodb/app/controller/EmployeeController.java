@@ -1,5 +1,7 @@
 package pod.tsu.spring.dynamodb.app.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,8 @@ import pod.tsu.spring.dynamodb.persistence.repository.EmployeeRepository;
 @RequestMapping("/api/")
 public class EmployeeController {
 
+    private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
+
     private final EmployeeRepository employeeRepository;
 
     public EmployeeController(EmployeeRepository employeeRepository) {
@@ -25,12 +29,14 @@ public class EmployeeController {
 
     @PostMapping("employee")
     public ResponseEntity<ResponseDto> save(@RequestBody Employee employee) {
+        LOG.info("Saving employee : {}", employee);
         employeeRepository.save(employee);
         return ResponseEntity.ok(new ResponseDto("Employee created with id: " + employee.getEmployeeId()));
     }
 
-    @PutMapping("/employee/{id}")
+    @PutMapping("employee/{id}")
     public ResponseEntity<ResponseDto> update(@PathVariable("id") String id, @RequestBody Employee employee) {
+        LOG.info("Updating employee : {}", employee);
         if (!id.equals(employee.getEmployeeId())) {
             var response = new ResponseDto("Employee id mismatch");
             return ResponseEntity.badRequest().body(response);
@@ -41,13 +47,15 @@ public class EmployeeController {
 
     @GetMapping("employee/{id}")
     public ResponseEntity<Employee> findById(@PathVariable("id") String id) {
+        LOG.info("Finding employee with ID: {}", id);
         return employeeRepository.findById(id)
             .map(ResponseEntity::ok)
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/employee/{id}")
+    @DeleteMapping("employee/{id}")
     public ResponseEntity<ResponseDto> deleteById(@PathVariable("id") String id) {
+        LOG.info("Deleting employee with ID: {}", id);
         employeeRepository.delete(id);
         return ResponseEntity.ok(new ResponseDto("Employee deleted"));
     }
