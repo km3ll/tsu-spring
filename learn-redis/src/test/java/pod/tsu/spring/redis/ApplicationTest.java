@@ -15,17 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ApplicationTest {
 
-    private static final String cacheName = "product-catalog";
-    private static final ObjectMapper mapper = new ObjectMapper()
+    private final Cache cache;
+
+    private final ObjectMapper mapper = new ObjectMapper()
         .disable(SerializationFeature.INDENT_OUTPUT);
 
     @Autowired
-    private RedisCacheManager redisCacheManager;
+    public ApplicationTest(RedisCacheManager redisCacheManager) {
+        this.cache = redisCacheManager.getCache("product-catalog");
+    }
 
     @Test
     @DisplayName("Cache manager should create a cache namespace")
     public void manager_connectsToServer() {
-        Cache cache = redisCacheManager.getCache(cacheName);
         assertNotNull(cache);
     }
 
@@ -34,7 +36,6 @@ class ApplicationTest {
     public void manager_putsNewObject() throws Exception {
 
         // Given
-        Cache cache = redisCacheManager.getCache(cacheName);
         Item item = Generator.genItem();
         String key = item.getCountry() + ":" + item.getId();
 
@@ -48,7 +49,6 @@ class ApplicationTest {
     public void manager_getsAnObject() throws Exception {
 
         // Given
-        Cache cache = redisCacheManager.getCache(cacheName);
         Item item = Generator.genItem();
         String key = item.getCountry() + ":" + item.getId();
 
@@ -68,7 +68,6 @@ class ApplicationTest {
     public void manager_evictsAnObjectByKey() throws Exception {
 
         // Given
-        Cache cache = redisCacheManager.getCache(cacheName);
         Item item = Generator.genItem();
         String key = item.getCountry() + ":" + item.getId();
 
@@ -87,7 +86,6 @@ class ApplicationTest {
     public void manager_clearAllCacheEntries() throws Exception {
 
         // Given
-        Cache cache = redisCacheManager.getCache(cacheName);
         Item item = Generator.genItem();
         String key = item.getCountry() + ":" + item.getId();
 
