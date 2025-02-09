@@ -1,13 +1,13 @@
-package tsu.pod.app_base;
+package tsu.pod.appbase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AppBaseApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppBaseApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
