@@ -1,4 +1,4 @@
-package tsu.pod.app_base;
+package tsu.pod.appbase;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
