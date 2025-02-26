@@ -3,6 +3,7 @@
 ## v2
 
 - [app-base](v2/app-base)
+- [app-exploratory](v2/app-exploratory)
 
 ## v1
 
