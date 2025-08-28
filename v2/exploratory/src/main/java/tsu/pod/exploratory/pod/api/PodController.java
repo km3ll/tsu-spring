@@ -1,21 +1,19 @@
-package tsu.pod.exploratory.pod.controller;
+package tsu.pod.exploratory.pod.api;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import tsu.pod.exploratory.pod.api.dto.GreetResponse;
 
 @RestController
 @RequestMapping("/v1/pod/")
 public class PodController {
 
-	private final Logger logger = LoggerFactory.getLogger(PodController.class);
-
 	@GetMapping("greeting")
-	public ResponseEntity<String> getGreeting() {
-		return ResponseEntity.ok("Hello Pod");
+	public ResponseEntity<GreetResponse> greet() {
+		var response = new GreetResponse("Hello Pod");
+		return ResponseEntity.ok(response);
 	}
 
 }
