@@ -2,11 +2,11 @@
 
 ## v2
 
-- [app-base](v2/app-base)
-- [app-exploratory](v2/app-exploratory)
+- [exploratory](v2/exploratory)
 
 ## v1
 
+- [app-base](v1/app-base)
 - [app-bookstore](v1/app-bookstore)
 - [app-pokemon](v1/app-pokemon)
 - [app-secureapi](v1/app-secureapi)
