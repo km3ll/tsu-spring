@@ -10,17 +10,17 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PodConfig {
 
-    private final Logger logger = LoggerFactory.getLogger(PodConfig.class);
+	private final Logger logger = LoggerFactory.getLogger(PodConfig.class);
 
-    public PodConfig() {
-        logger.info("Created");
-    }
+	public PodConfig() {
+		logger.info("Created");
+	}
 
-    @Bean
-    public ApplicationRunner applicationRunner(@Value("${app.name}") String appName) {
-        return args -> {
-            logger.info("{} started", appName);
-        };
-    }
+	@Bean
+	public ApplicationRunner applicationRunner(@Value("${app.name}") String appName) {
+		return args -> {
+			logger.info("{} started", appName);
+		};
+	}
 
 }

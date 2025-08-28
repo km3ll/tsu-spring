@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/pod/")
 public class PodController {
 
-    private final Logger logger = LoggerFactory.getLogger(PodController.class);
+	private final Logger logger = LoggerFactory.getLogger(PodController.class);
 
-    @GetMapping("greeting")
-    public ResponseEntity<String> getGreeting() {
-        return ResponseEntity.ok("Hello Pod");
-    }
+	@GetMapping("greeting")
+	public ResponseEntity<String> getGreeting() {
+		return ResponseEntity.ok("Hello Pod");
+	}
 
 }

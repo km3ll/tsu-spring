@@ -3,6 +3,8 @@
 ## commands
 
 ```bash
+mvn spring-javaformat:apply
+
 mvn clean package
 java -jar target/exploratory-1.0.jar
 
