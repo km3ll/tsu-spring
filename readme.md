@@ -1,18 +1,19 @@
 # tsu-spring
 
-## v2
+## current
 
-- [exploratory](v2/exploratory)
+- [app-base](current/app-base)
+- [app-dynamodb](current/app-dynamodb)
+- [exploratory](current/exploratory)
 
-## v1
+## backup
 
-- [app-base](v1/app-base)
-- [app-bookstore](v1/app-bookstore)
-- [app-pokemon](v1/app-pokemon)
-- [app-secureapi](v1/app-secureapi)
-- [learn-dynamodb](v1/learn-dynamodb)
-- [learn-h2](v1/learn-h2)
-- [learn-postgresql](v1/learn-postgresql)
-- [learn-redis](v1/learn-redis)
-- [learn-spring](v1/learn-spring)
-- [test-containers](v1/test-containers)
+- [app-bookstore](backup/app-bookstore)
+- [app-pokemon](backup/app-pokemon)
+- [app-secureapi](backup/app-secureapi)
+- [learn-dynamodb](backup/learn-dynamodb)
+- [learn-h2](backup/learn-h2)
+- [learn-postgresql](backup/learn-postgresql)
+- [learn-redis](backup/learn-redis)
+- [learn-spring](backup/learn-spring)
+- [test-containers](backup/test-containers)
