@@ -1,4 +1,4 @@
-package tsu.pod.appdynamodb.rest;
+package tsu.pod.dynamodb.rest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
