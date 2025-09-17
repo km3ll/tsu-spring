@@ -4,6 +4,7 @@
 
 - [app-base](current/app-base)
 - [app-dynamodb](current/app-dynamodb)
+- [app-modules](current/app-modules)
 - [exploratory](current/exploratory)
 
 ## backup
