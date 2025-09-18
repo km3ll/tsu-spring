@@ -1,4 +1,4 @@
-package tsu.pod.dynamodb.model.orders;
+package tsu.pod.dynamodb.repository.dao;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -10,10 +10,10 @@ import org.springframework.data.annotation.Id;
 
 @NoArgsConstructor
 @DynamoDBTable(tableName = "orders")
-public class Order {
+public class OrderDao {
 
 	@Id
-	private OrderKey orderKey;
+	private KeyDao orderKey;
 
 	private String entityType;
 
@@ -22,11 +22,11 @@ public class Order {
 	private String date;
 
 	@DynamoDBIgnore
-	public OrderKey getOrderKey() {
+	public KeyDao getOrderKey() {
 		return orderKey;
 	}
 
-	public void setOrderKey(OrderKey orderKey) {
+	public void setOrderKey(KeyDao orderKey) {
 		this.orderKey = orderKey;
 	}
 
@@ -37,7 +37,7 @@ public class Order {
 
 	public void setPk(String pk) {
 		if (this.orderKey == null)
-			this.orderKey = new OrderKey();
+			this.orderKey = new KeyDao();
 		this.orderKey.setPk(pk);
 	}
 
@@ -48,7 +48,7 @@ public class Order {
 
 	public void setSk(String sk) {
 		if (this.orderKey == null)
-			this.orderKey = new OrderKey();
+			this.orderKey = new KeyDao();
 		this.orderKey.setSk(sk);
 	}
 

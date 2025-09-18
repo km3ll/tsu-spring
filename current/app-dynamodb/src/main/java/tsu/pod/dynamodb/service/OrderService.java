@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import tsu.pod.dynamodb.model.orders.Order;
-import tsu.pod.dynamodb.model.orders.OrderKey;
 import tsu.pod.dynamodb.repository.OrderRepository;
+import tsu.pod.dynamodb.repository.dao.KeyDao;
+import tsu.pod.dynamodb.repository.dao.OrderDao;
 
 @Service
 public class OrderService {
@@ -17,27 +17,27 @@ public class OrderService {
 		this.repository = repository;
 	}
 
-	public Order saveOrder(Order order) {
+	public OrderDao saveOrder(OrderDao order) {
 		return repository.save(order);
 	}
 
-	public Optional<Order> findOrder(String pk, String sk) {
-		return repository.findById(new OrderKey(pk, sk));
+	public Optional<OrderDao> findOrder(String pk, String sk) {
+		return repository.findById(new KeyDao(pk, sk));
 	}
 
 	public boolean orderExists(String pk, String sk) {
-		return repository.existsById(new OrderKey(pk, sk));
+		return repository.existsById(new KeyDao(pk, sk));
 	}
 
 	public void deleteOrder(String pk, String sk) {
-		repository.deleteById(new OrderKey(pk, sk));
+		repository.deleteById(new KeyDao(pk, sk));
 	}
 
-	public Iterable<Order> findAllOrders() {
+	public Iterable<OrderDao> findAllOrders() {
 		return repository.findAll();
 	}
 
-	public List<Order> findByPk(String pk) {
+	public List<OrderDao> findByPk(String pk) {
 		return repository.findByPk(pk);
 	}
 

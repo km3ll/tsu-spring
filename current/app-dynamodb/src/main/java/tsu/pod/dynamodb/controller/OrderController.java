@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tsu.pod.dynamodb.model.orders.Order;
+import tsu.pod.dynamodb.repository.dao.OrderDao;
 import tsu.pod.dynamodb.service.OrderService;
 
 @RestController
@@ -28,16 +28,16 @@ public class OrderController {
 
 	// Create or Update
 	@PostMapping
-	public ResponseEntity<Order> saveOrder(@RequestBody Order order) {
-		Order saved = service.saveOrder(order);
+	public ResponseEntity<OrderDao> saveOrder(@RequestBody OrderDao order) {
+		OrderDao saved = service.saveOrder(order);
 		return ResponseEntity.ok(saved);
 	}
 
 	// Read by ID
 	@GetMapping("/{id}")
-	public ResponseEntity<Order> getOrder(@PathVariable String id) {
+	public ResponseEntity<OrderDao> getOrder(@PathVariable String id) {
 		String key = "OID#" + id;
-		Optional<Order> order = service.findOrder(key, key);
+		Optional<OrderDao> order = service.findOrder(key, key);
 		return order.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
 	}
 
@@ -54,7 +54,7 @@ public class OrderController {
 
 	// List All
 	@GetMapping
-	public ResponseEntity<Iterable<Order>> listOrders() {
+	public ResponseEntity<Iterable<OrderDao>> listOrders() {
 		return ResponseEntity.ok(service.findAllOrders());
 	}
 

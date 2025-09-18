@@ -1,4 +1,4 @@
-package tsu.pod.dynamodb.model.orders;
+package tsu.pod.dynamodb.repository.dao;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderKey implements Serializable {
+public class KeyDao implements Serializable {
 
 	private String pk;
 
@@ -32,4 +32,11 @@ public class OrderKey implements Serializable {
 		this.sk = sk;
 	}
 
+	@Override
+	public String toString() {
+		return "KeyDao{" +
+			"pk='" + pk + '\'' +
+			", sk='" + sk + '\'' +
+			'}';
+	}
 }
