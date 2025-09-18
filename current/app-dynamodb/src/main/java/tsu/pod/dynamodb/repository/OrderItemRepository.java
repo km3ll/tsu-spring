@@ -10,6 +10,6 @@ import java.util.List;
 @EnableScan
 public interface OrderItemRepository extends CrudRepository<OrderItemDao, KeyDao> {
 
-    List<OrderItemDao> findByPk(String pk);
+	List<OrderItemDao> findByPk(String pk);
 
 }

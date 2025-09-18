@@ -64,12 +64,8 @@ public class OrderItemDao {
 
 	@Override
 	public String toString() {
-		return "OrderItemDao{" +
-			"keyDao=" + keyDao +
-			", recordType='" + recordType + '\'' +
-			", quantity=" + quantity +
-			", price=" + price +
-			'}';
+		return "OrderItemDao{" + "keyDao=" + keyDao + ", recordType='" + recordType + '\'' + ", quantity=" + quantity
+				+ ", price=" + price + '}';
 	}
 
 	public static KeyDao buildKey(String orderId, String itemId) {

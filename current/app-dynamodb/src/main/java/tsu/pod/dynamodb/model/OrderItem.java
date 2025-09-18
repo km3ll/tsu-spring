@@ -9,9 +9,12 @@ import lombok.Setter;
 @Setter
 public class OrderItem {
 
-    private String orderId;
-    private String itemId;
-    private int quantity;
-    private double price;
+	private String orderId;
+
+	private String itemId;
+
+	private int quantity;
+
+	private double price;
 
 }

@@ -14,42 +14,51 @@ import java.util.stream.StreamSupport;
 @Service
 public class OrderItemService {
 
-    private final Logger logger = LoggerFactory.getLogger(OrderItemService.class);
+	private final Logger logger = LoggerFactory.getLogger(OrderItemService.class);
 
-    private final OrderItemRepository repository;
+	private final OrderItemRepository repository;
 
-    public OrderItemService(OrderItemRepository repository) {
-        this.repository = repository;
-    }
+	public OrderItemService(OrderItemRepository repository) {
+		this.repository = repository;
+	}
 
-    public OrderItem save(OrderItem orderItem) {
-        var orderItemDao = OrderItemDao.builder()
-            .keyDao(OrderItemDao.buildKey(orderItem.getOrderId(), orderItem.getItemId()))
-            .quantity(orderItem.getQuantity())
-            .price(orderItem.getPrice())
-            .build();
-        repository.save(orderItemDao);
-        return orderItem;
-    }
+	public OrderItem save(OrderItem orderItem) {
+		var orderItemDao = OrderItemDao.builder()
+			.keyDao(OrderItemDao.buildKey(orderItem.getOrderId(), orderItem.getItemId()))
+			.quantity(orderItem.getQuantity())
+			.price(orderItem.getPrice())
+			.build();
+		repository.save(orderItemDao);
+		return orderItem;
+	}
 
-    public Optional<OrderItem> find(String orderId, String itemId) {
-        var keyDao = OrderItemDao.buildKey(orderId, itemId);
-        return repository.findById(keyDao).map(this::toOrderItem);
-    }
+	public Optional<OrderItem> find(String orderId, String itemId) {
+		var keyDao = OrderItemDao.buildKey(orderId, itemId);
+		return repository.findById(keyDao).map(this::toOrderItem);
+	}
 
-    public List<OrderItem> findAll() {
-        return StreamSupport.stream(repository.findAll().spliterator(), false)
-            .map(this::toOrderItem)
-            .toList();
-    }
+	public List<OrderItem> findAll() {
+		return StreamSupport.stream(repository.findAll().spliterator(), false).map(this::toOrderItem).toList();
+	}
 
-    private OrderItem toOrderItem(OrderItemDao dao) {
-        return OrderItem.builder()
-            .orderId(dao.getPk().split("#")[1])
-            .itemId(dao.getSk().split("#")[1])
-            .quantity(dao.getQuantity())
-            .price(dao.getPrice())
-            .build();
-    }
+	public boolean exists(String orderId, String itemId) {
+		var keyDao = OrderItemDao.buildKey(orderId, itemId);
+		return repository.existsById(keyDao);
+	}
+
+	public void delete(String orderId, String itemId) {
+		var keyDao = OrderItemDao.buildKey(orderId, itemId);
+		repository.deleteById(keyDao);
+	}
+
+	private OrderItem toOrderItem(OrderItemDao dao) {
+		logger.info("Converting OrderItemDao: {}", dao);
+		return OrderItem.builder()
+			.orderId(dao.getPk().split("#")[1])
+			.itemId(dao.getSk().split("#")[1])
+			.quantity(dao.getQuantity())
+			.price(dao.getPrice())
+			.build();
+	}
 
 }

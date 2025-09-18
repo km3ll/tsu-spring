@@ -34,9 +34,7 @@ public class KeyDao implements Serializable {
 
 	@Override
 	public String toString() {
-		return "KeyDao{" +
-			"pk='" + pk + '\'' +
-			", sk='" + sk + '\'' +
-			'}';
+		return "KeyDao{" + "pk='" + pk + '\'' + ", sk='" + sk + '\'' + '}';
 	}
+
 }
