@@ -1,7 +1,5 @@
-version: "3.8"
-
 services:
-  dynamodb-local:
+  dynamodb:
     image: amazon/dynamodb-local:latest
     container_name: dynamodb-local
     ports:
@@ -9,6 +7,6 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
     restart: unless-stopped
     environment:
-      - AWS_ACCESS_KEY_ID=dummy-key
-      - AWS_SECRET_ACCESS_KEY=dummy-secret
+      - AWS_ACCESS_KEY_ID=dummyKey
+      - AWS_SECRET_ACCESS_KEY=dummySecret
       - AWS_DEFAULT_REGION=us-east-1

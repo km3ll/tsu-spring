@@ -20,58 +20,45 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 @EnableDynamoDBRepositories(basePackages = "tsu.pod.dynamodb.repository")
 public class DynamoConfig {
 
-    private static final String LOCAL_DYNAMO_ENDPOINT = "http://localhost:8000";
-    private static final String DUMMY_KEY = "dummyKey";
-    private static final String DUMMY_SECRET = "dummySecret";
+	private static final String LOCAL_DYNAMO_ENDPOINT = "http://localhost:8000";
 
-    private final Logger logger = LoggerFactory.getLogger(DynamoConfig.class);
+	private static final String DUMMY_KEY = "dummyKey";
 
-    public DynamoConfig() {
-        logger.info("Initializing DynamoDB clients");
-    }
+	private static final String DUMMY_SECRET = "dummySecret";
 
-    @Bean
-    public DynamoDbClient dynamoDbClient() {
-        return DynamoDbClient.builder()
-            .region(Region.US_EAST_1) // arbitrary region for local
-            .endpointOverride(URI.create(LOCAL_DYNAMO_ENDPOINT))
-            .credentialsProvider(
-                StaticCredentialsProvider.create(
-                    AwsBasicCredentials.create(DUMMY_KEY, DUMMY_SECRET)
-                )
-            )
-            .build();
-    }
+	private final Logger logger = LoggerFactory.getLogger(DynamoConfig.class);
 
+	public DynamoConfig() {
+		logger.info("Initializing DynamoDB clients");
+	}
 
-    @Bean
-    public DynamoDbAsyncClient dynamoDbAsyncClient() {
-        return DynamoDbAsyncClient.builder()
-            .region(Region.US_EAST_1) // arbitrary region for local DynamoDB
-            .endpointOverride(URI.create(LOCAL_DYNAMO_ENDPOINT))
-            .credentialsProvider(
-                StaticCredentialsProvider.create(
-                    AwsBasicCredentials.create(DUMMY_KEY, DUMMY_SECRET)
-                )
-            )
-            .build();
-    }
+	@Bean
+	public DynamoDbClient dynamoDbClient() {
+		return DynamoDbClient.builder()
+			.region(Region.US_EAST_1) // arbitrary region for local
+			.endpointOverride(URI.create(LOCAL_DYNAMO_ENDPOINT))
+			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(DUMMY_KEY, DUMMY_SECRET)))
+			.build();
+	}
 
-    @Bean
-    public AmazonDynamoDB amazonDynamoDB() {
-        return AmazonDynamoDBClientBuilder.standard()
-                // Point to local DynamoDB endpoint
-                .withEndpointConfiguration(
-                        new AwsClientBuilder.EndpointConfiguration("http://localhost:8000", "us-east-1")
-                )
-                // DynamoDB local ignores credentials, but SDK requires them
-                .withCredentials(
-                        new com.amazonaws.auth.AWSStaticCredentialsProvider(
-                                new com.amazonaws.auth.BasicAWSCredentials("dummyKey", "dummySecret")
-                        )
-                )
-                .build();
-    }
+	@Bean
+	public DynamoDbAsyncClient dynamoDbAsyncClient() {
+		return DynamoDbAsyncClient.builder()
+			.region(Region.US_EAST_1) // arbitrary region for local DynamoDB
+			.endpointOverride(URI.create(LOCAL_DYNAMO_ENDPOINT))
+			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(DUMMY_KEY, DUMMY_SECRET)))
+			.build();
+	}
 
+	@Bean
+	public AmazonDynamoDB amazonDynamoDB() {
+		return AmazonDynamoDBClientBuilder.standard()
+			// Point to local DynamoDB endpoint
+			.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8000", "us-east-1"))
+			// DynamoDB local ignores credentials, but SDK requires them
+			.withCredentials(new com.amazonaws.auth.AWSStaticCredentialsProvider(
+					new com.amazonaws.auth.BasicAWSCredentials("dummyKey", "dummySecret")))
+			.build();
+	}
 
 }
