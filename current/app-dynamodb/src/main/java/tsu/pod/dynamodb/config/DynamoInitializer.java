@@ -11,7 +11,6 @@ import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 import software.amazon.awssdk.services.dynamodb.model.AttributeDefinition;
 import software.amazon.awssdk.services.dynamodb.model.CreateTableRequest;
 import software.amazon.awssdk.services.dynamodb.model.DeleteTableRequest;
-import software.amazon.awssdk.services.dynamodb.model.DeleteTableResponse;
 import software.amazon.awssdk.services.dynamodb.model.KeySchemaElement;
 import software.amazon.awssdk.services.dynamodb.model.KeyType;
 import software.amazon.awssdk.services.dynamodb.model.ListTablesResponse;
@@ -32,49 +31,16 @@ public class DynamoInitializer {
 	@Bean
 	ApplicationRunner initDynamoDb() {
 		return args -> {
-			createUsersTable();
-			createOrdersTable();
+			setupTable("orders");
+			setupTable("e-store");
 		};
 	}
 
-	private void createUsersTable() {
-		String tableName = "users";
-		if (tableExists(tableName)) {
-			logger.info("Table already exists: {}", tableName);
-			return;
+	private void setupTable(String name) {
+		if (tableExists(name)) {
+			deleteTable(name);
 		}
-		CreateTableRequest request = CreateTableRequest.builder()
-			.tableName(tableName)
-			.keySchema(KeySchemaElement.builder().attributeName("userId").keyType(KeyType.HASH).build())
-			.attributeDefinitions(
-					AttributeDefinition.builder().attributeName("userId").attributeType(ScalarAttributeType.S).build())
-			.provisionedThroughput(ProvisionedThroughput.builder().readCapacityUnits(5L).writeCapacityUnits(5L).build())
-			.build();
-		logger.info("Creating table: {}", tableName);
-		dynamoDbClient.createTable(request);
-		logger.info("Created table: {}", tableName);
-	}
-
-	private void createOrdersTable() {
-		String tableName = "orders";
-		if (tableExists(tableName)) {
-			logger.info("Table already exists: {}", tableName);
-			return;
-		}
-
-		CreateTableRequest request = CreateTableRequest.builder()
-			.tableName(tableName)
-			.keySchema(Arrays.asList(KeySchemaElement.builder().attributeName("PK").keyType(KeyType.HASH).build(),
-					KeySchemaElement.builder().attributeName("SK").keyType(KeyType.RANGE).build()))
-			.attributeDefinitions(Arrays.asList(
-					AttributeDefinition.builder().attributeName("PK").attributeType(ScalarAttributeType.S).build(),
-					AttributeDefinition.builder().attributeName("SK").attributeType(ScalarAttributeType.S).build()))
-			.provisionedThroughput(ProvisionedThroughput.builder().readCapacityUnits(5L).writeCapacityUnits(5L).build())
-			.build();
-
-		logger.info("Creating table: {}", tableName);
-		dynamoDbClient.createTable(request);
-		logger.info("Created table: {}", tableName);
+		createTable(name);
 	}
 
 	private boolean tableExists(String tableName) {
@@ -82,16 +48,35 @@ public class DynamoInitializer {
 		return tables.tableNames().contains(tableName);
 	}
 
-	private void deleteTable(String tableName) {
+	private void deleteTable(String name) {
 		try {
-			logger.info("Deleting table: {}", tableName);
-			DeleteTableRequest request = DeleteTableRequest.builder().tableName(tableName).build();
-			DeleteTableResponse response = dynamoDbClient.deleteTable(request);
+			var request = DeleteTableRequest.builder().tableName(name).build();
+			var response = dynamoDbClient.deleteTable(request);
 			logger.info("Table deleted: {}", response.tableDescription().tableName());
+		} catch (ResourceNotFoundException ex) {
+			logger.error("Table not found: {}", name);
 		}
-		catch (ResourceNotFoundException ex) {
-			logger.error("Table not found: {}", tableName);
-		}
+	}
+
+	private void createTable(String name) {
+		var request = CreateTableRequest.builder()
+			.tableName(name)
+			.keySchema(Arrays.asList(
+				KeySchemaElement.builder().attributeName("PK").keyType(KeyType.HASH).build(),
+				KeySchemaElement.builder().attributeName("SK").keyType(KeyType.RANGE).build())
+			)
+			.attributeDefinitions(Arrays.asList(
+				AttributeDefinition.builder().attributeName("PK").attributeType(ScalarAttributeType.S).build(),
+				AttributeDefinition.builder().attributeName("SK").attributeType(ScalarAttributeType.S).build()))
+			.provisionedThroughput(
+				ProvisionedThroughput.builder()
+					.readCapacityUnits(10L)
+					.writeCapacityUnits(10L)
+					.build()
+			)
+			.build();
+		dynamoDbClient.createTable(request);
+		logger.info("Created table: {}", name);
 	}
 
 }
