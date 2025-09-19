@@ -11,13 +11,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class PostOrderRequest {
+public class ItemDto {
 
-	private OrderDto order;
+	private String id;
+
+	private Integer quantity;
+
+	private Double price;
 
 	@Override
 	public String toString() {
-		return "PostOrderRequest{" + "order=" + order + '}';
+		return "ItemDto{" + "id='" + id + '\'' + ", quantity=" + quantity + ", price=" + price + '}';
 	}
 
 }

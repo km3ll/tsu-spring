@@ -1,5 +1,6 @@
 package tsu.pod.dynamodb.controller;
 
+import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +16,14 @@ import tsu.pod.dynamodb.controller.dto.GetOrderResponse;
 import tsu.pod.dynamodb.controller.dto.OrderDto;
 import tsu.pod.dynamodb.controller.dto.PostOrderRequest;
 import tsu.pod.dynamodb.controller.dto.PostOrderResponse;
+import tsu.pod.dynamodb.repository.ItemRepository;
 import tsu.pod.dynamodb.repository.OrderRepository;
+import tsu.pod.dynamodb.repository.dao.ItemDao;
 import tsu.pod.dynamodb.repository.dao.OrderDao;
 import tsu.pod.dynamodb.repository.dao.PrimaryKey;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -29,47 +31,69 @@ public class OrderController {
 
 	private final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
-	private final OrderRepository repository;
+	private final OrderRepository orderRepository;
 
-	public OrderController(OrderRepository repository) {
-		this.repository = repository;
+	private final ItemRepository itemRepository;
+
+	public OrderController(OrderRepository repository, ItemRepository itemRepository) {
+		this.orderRepository = repository;
+		this.itemRepository = itemRepository;
 	}
 
 	// Create or Update
 	@PostMapping
 	public ResponseEntity<PostOrderResponse> postOrder(@RequestBody PostOrderRequest request) {
-		OrderDao orderDao = OrderMapper.toOrderDao(request.order());
-		OrderDao saved = repository.save(orderDao);
-		PostOrderResponse response = new PostOrderResponse(OrderMapper.toOrderDto(saved));
+
+		logger.info("Request: {}", request);
+		OrderDao orderDao = OrderMapper.toOrderDao(request.getOrder());
+		OrderDao savedOrderDao = orderRepository.save(orderDao);
+
+		List<ItemDao> itemDaos = OrderMapper.toListOfItemDaos(request.getOrder());
+		List<ItemDao> savedItemDaos = Lists.newArrayList(itemRepository.saveAll(itemDaos));
+
+		OrderDto orderDto = OrderMapper.toOrderDto(savedOrderDao, savedItemDaos);
+		PostOrderResponse response = PostOrderResponse.builder().order(orderDto).build();
+
+		logger.info("Response: {}", response);
 		return ResponseEntity.ok(response);
+
 	}
 
 	// Read by Order ID
 	@GetMapping("/{id}")
-	public ResponseEntity<GetOrderResponse> getOrder(@PathVariable("id") String id) {
-		PrimaryKey key = OrderDao.buidKey(id);
-		Optional<GetOrderResponse> response = repository.findByPk(key.getPk())
-			.stream()
-			.findFirst()
-			.map(dao -> new GetOrderResponse(OrderMapper.toOrderDto(dao)));
-		return response.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
-	}
+	public ResponseEntity<GetOrderResponse> getOrder(@PathVariable("id") String orderId) {
 
-	// Delete
-	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deleteOrder(@PathVariable("id") String id) {
-		PrimaryKey key = OrderDao.buidKey(id);
-		repository.deleteAll(repository.findByPk(key.getPk()));
-		return ResponseEntity.noContent().build();
+		PrimaryKey orderKey = OrderDao.buidKey(orderId);
+		Optional<OrderDao> orderDao = orderRepository.findByPk(orderKey.getPk()).stream().findFirst();
+		List<ItemDao> itemDaos = findOrderItems(orderId);
+
+		Optional<GetOrderResponse> response = orderDao
+			.map(dao -> GetOrderResponse.builder().order(OrderMapper.toOrderDto(dao, itemDaos)).build());
+		return response.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+
 	}
 
 	// List All
 	@GetMapping
 	public ResponseEntity<GetAllOrdersResponse> getAllOrders() {
-		List<OrderDto> orders = StreamSupport.stream(repository.findAll().spliterator(), false)
-			.map(OrderMapper::toOrderDto)
+		List<OrderDto> orders = Lists.newArrayList(orderRepository.findAll())
+			.stream()
+			.filter(orderDao -> orderDao.getEntityType().equals("order"))
+			.map(orderDao -> {
+				List<ItemDao> itemDaos = findOrderItems(orderDao.getOrderId());
+				return OrderMapper.toOrderDto(orderDao, itemDaos);
+			})
 			.toList();
-		return ResponseEntity.ok(new GetAllOrdersResponse(orders));
+		GetAllOrdersResponse response = GetAllOrdersResponse.builder().orders(orders).build();
+		return ResponseEntity.ok(response);
+	}
+
+	private List<ItemDao> findOrderItems(String orderId) {
+		PrimaryKey itemKey = ItemDao.buidKey(orderId);
+		return Lists.newArrayList(itemRepository.findByPk(itemKey.getPk()))
+			.stream()
+			.filter(itemDao -> itemDao.getEntityType().equals("orderItem"))
+			.toList();
 	}
 
 }

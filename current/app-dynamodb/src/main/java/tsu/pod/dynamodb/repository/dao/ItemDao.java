@@ -18,7 +18,7 @@ import org.springframework.data.annotation.Id;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 @DynamoDBTable(tableName = "e-store")
-public class OrderDao {
+public class ItemDao {
 
 	@Id
 	@DynamoDBIgnore
@@ -30,7 +30,7 @@ public class OrderDao {
 	}
 
 	@DynamoDBIgnore
-	public String getCustomerId() {
+	public String getItemId() {
 		return primaryKey.getSk().split("#")[1];
 	}
 
@@ -58,26 +58,29 @@ public class OrderDao {
 
 	@Builder.Default
 	@DynamoDBAttribute(attributeName = "EntityType")
-	private String entityType = "order";
+	private String entityType = "orderItem";
 
-	@DynamoDBAttribute(attributeName = "Date")
-	private String date;
+	@DynamoDBAttribute(attributeName = "Quantity")
+	private Integer quantity;
+
+	@DynamoDBAttribute(attributeName = "Price")
+	private Double price;
 
 	@Override
 	public String toString() {
-		return "OrderDao{" + "primaryKey=" + primaryKey + ", entityType='" + entityType + '\'' + ", date='" + date
-				+ '\'' + '}';
+		return "ItemDao{" + "primaryKey=" + primaryKey + ", entityType='" + entityType + '\'' + ", quantity=" + quantity
+				+ ", price=" + price + '}';
 	}
 
-	public static PrimaryKey buidKey(String orderId, String customerId) {
+	public static PrimaryKey buidKey(String orderId, String itemId) {
 		String pk = "order#" + orderId;
-		String sk = "customer#" + customerId;
+		String sk = "item#" + itemId;
 		return new PrimaryKey(pk, sk);
 	}
 
 	public static PrimaryKey buidKey(String orderId) {
 		String pk = "order#" + orderId;
-		String sk = "customer#";
+		String sk = "item#";
 		return new PrimaryKey(pk, sk);
 	}
 
