@@ -52,7 +52,7 @@ public class DynamoInitializer {
 		try {
 			var request = DeleteTableRequest.builder().tableName(name).build();
 			var response = dynamoDbClient.deleteTable(request);
-			logger.info("Table deleted: {}", response.tableDescription().tableName());
+			logger.info("Deleted table: {}", response.tableDescription().tableName());
 		} catch (ResourceNotFoundException ex) {
 			logger.error("Table not found: {}", name);
 		}

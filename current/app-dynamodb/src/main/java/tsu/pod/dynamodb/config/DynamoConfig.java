@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
-import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 @Configuration
@@ -42,22 +41,13 @@ public class DynamoConfig {
 	}
 
 	@Bean
-	public DynamoDbAsyncClient dynamoDbAsyncClient() {
-		return DynamoDbAsyncClient.builder()
-			.region(Region.US_EAST_1) // arbitrary region for local DynamoDB
-			.endpointOverride(URI.create(LOCAL_DYNAMO_ENDPOINT))
-			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(DUMMY_KEY, DUMMY_SECRET)))
-			.build();
-	}
-
-	@Bean
 	public AmazonDynamoDB amazonDynamoDB() {
 		return AmazonDynamoDBClientBuilder.standard()
 			// Point to local DynamoDB endpoint
 			.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8000", "us-east-1"))
 			// DynamoDB local ignores credentials, but SDK requires them
 			.withCredentials(new com.amazonaws.auth.AWSStaticCredentialsProvider(
-					new com.amazonaws.auth.BasicAWSCredentials("dummyKey", "dummySecret")))
+					new com.amazonaws.auth.BasicAWSCredentials(DUMMY_KEY, DUMMY_SECRET)))
 			.build();
 	}
 
