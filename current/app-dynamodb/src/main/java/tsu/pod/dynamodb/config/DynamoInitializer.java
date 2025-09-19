@@ -31,7 +31,6 @@ public class DynamoInitializer {
 	@Bean
 	ApplicationRunner initDynamoDb() {
 		return args -> {
-			setupTable("orders");
 			setupTable("e-store");
 		};
 	}
@@ -53,7 +52,8 @@ public class DynamoInitializer {
 			var request = DeleteTableRequest.builder().tableName(name).build();
 			var response = dynamoDbClient.deleteTable(request);
 			logger.info("Deleted table: {}", response.tableDescription().tableName());
-		} catch (ResourceNotFoundException ex) {
+		}
+		catch (ResourceNotFoundException ex) {
 			logger.error("Table not found: {}", name);
 		}
 	}
@@ -61,19 +61,13 @@ public class DynamoInitializer {
 	private void createTable(String name) {
 		var request = CreateTableRequest.builder()
 			.tableName(name)
-			.keySchema(Arrays.asList(
-				KeySchemaElement.builder().attributeName("PK").keyType(KeyType.HASH).build(),
-				KeySchemaElement.builder().attributeName("SK").keyType(KeyType.RANGE).build())
-			)
+			.keySchema(Arrays.asList(KeySchemaElement.builder().attributeName("PK").keyType(KeyType.HASH).build(),
+					KeySchemaElement.builder().attributeName("SK").keyType(KeyType.RANGE).build()))
 			.attributeDefinitions(Arrays.asList(
-				AttributeDefinition.builder().attributeName("PK").attributeType(ScalarAttributeType.S).build(),
-				AttributeDefinition.builder().attributeName("SK").attributeType(ScalarAttributeType.S).build()))
+					AttributeDefinition.builder().attributeName("PK").attributeType(ScalarAttributeType.S).build(),
+					AttributeDefinition.builder().attributeName("SK").attributeType(ScalarAttributeType.S).build()))
 			.provisionedThroughput(
-				ProvisionedThroughput.builder()
-					.readCapacityUnits(10L)
-					.writeCapacityUnits(10L)
-					.build()
-			)
+					ProvisionedThroughput.builder().readCapacityUnits(10L).writeCapacityUnits(10L).build())
 			.build();
 		dynamoDbClient.createTable(request);
 		logger.info("Created table: {}", name);

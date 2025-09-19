@@ -20,60 +20,65 @@ import org.springframework.data.annotation.Id;
 @DynamoDBTable(tableName = "e-store")
 public class OrderDao {
 
-    @Id
-    @DynamoDBIgnore
-    private PrimaryKey primaryKey;
+	@Id
+	@DynamoDBIgnore
+	private PrimaryKey primaryKey;
 
-    @DynamoDBHashKey(attributeName = "PK")
-    public String getPk() {
-        return primaryKey.getPk();
-    }
+	@DynamoDBIgnore
+	public String getOrderId() {
+		return primaryKey.getPk().split("#")[1];
+	}
 
-    public void setPk(String pk) {
-        if (this.primaryKey == null)
-            this.primaryKey = new PrimaryKey();
-        this.primaryKey.setPk(pk);
-    }
+	@DynamoDBIgnore
+	public String getCustomerId() {
+		return primaryKey.getSk().split("#")[1];
+	}
 
-    @DynamoDBRangeKey(attributeName = "SK")
-    public String getSk() {
-        return primaryKey.getSk();
-    }
+	@DynamoDBHashKey(attributeName = "PK")
+	public String getPk() {
+		return primaryKey.getPk();
+	}
 
-    public void setSk(String sk) {
-        if (this.primaryKey == null)
-            this.primaryKey = new PrimaryKey();
-        this.primaryKey.setSk(sk);
-    }
+	public void setPk(String pk) {
+		if (this.primaryKey == null)
+			this.primaryKey = new PrimaryKey();
+		this.primaryKey.setPk(pk);
+	}
 
-    @Builder.Default
-    @DynamoDBAttribute(attributeName = "EntityType")
-    private String entityType = "orderItem";
+	@DynamoDBRangeKey(attributeName = "SK")
+	public String getSk() {
+		return primaryKey.getSk();
+	}
 
-    @DynamoDBAttribute(attributeName = "Date")
-    private String date;
+	public void setSk(String sk) {
+		if (this.primaryKey == null)
+			this.primaryKey = new PrimaryKey();
+		this.primaryKey.setSk(sk);
+	}
 
-    public String getOrderId() {
-        return getPk().split("#")[1];
-    }
+	@Builder.Default
+	@DynamoDBAttribute(attributeName = "EntityType")
+	private String entityType = "orderItem";
 
-    public String getCustomerId() {
-        return getSk().split("#")[1];
-    }
+	@DynamoDBAttribute(attributeName = "Date")
+	private String date;
 
-    @Override
-    public String toString() {
-        return "OrderDao{" +
-                "primaryKey=" + primaryKey +
-                ", entityType='" + entityType + '\'' +
-                ", date='" + date + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "OrderDao{" + "primaryKey=" + primaryKey + ", entityType='" + entityType + '\'' + ", date='" + date
+				+ '\'' + '}';
+	}
 
-    public static PrimaryKey buidKey(String orderId, String customerId) {
-        String pk = "order#" + orderId;
-        String sk = "customer#" + customerId;
-        return new PrimaryKey(pk, sk);
-    }
+	public static PrimaryKey buidKey(String orderId, String customerId) {
+		String pk = "order#" + orderId;
+		String sk = "customer#" + customerId;
+		return new PrimaryKey(pk, sk);
+	}
+
+	public static PrimaryKey buidKey(String orderId) {
+		String pk = "order#" + orderId;
+		String sk = "customer#";
+		return new PrimaryKey(pk, sk);
+	}
 
 }

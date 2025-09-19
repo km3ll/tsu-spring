@@ -13,17 +13,15 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PrimaryKey {
 
-    @DynamoDBHashKey(attributeName = "PK")
-    private String pk;
+	@DynamoDBHashKey(attributeName = "PK")
+	private String pk;
 
-    @DynamoDBRangeKey(attributeName = "SK")
-    private String sk;
+	@DynamoDBRangeKey(attributeName = "SK")
+	private String sk;
 
-    @Override
-    public String toString() {
-        return "TableKey{" +
-                "pk='" + pk + '\'' +
-                ", sk='" + sk + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "TableKey{" + "pk='" + pk + '\'' + ", sk='" + sk + '\'' + '}';
+	}
+
 }
