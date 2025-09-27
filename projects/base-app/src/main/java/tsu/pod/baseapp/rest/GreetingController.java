@@ -1,4 +1,4 @@
-package tsu.pod.appbase.rest;
+package tsu.pod.baseapp.rest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
