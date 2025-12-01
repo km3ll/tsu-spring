@@ -5,7 +5,6 @@
 - [base-app](projects/base-app)
 - [app-dynamodb](projects/app-dynamodb)
 - [app-modules](projects/app-modules)
-- [exploratory](projects/exploratory)
 
 ## backup
 
