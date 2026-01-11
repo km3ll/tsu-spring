@@ -2,9 +2,10 @@
 
 ## projects
 
-- [base-app](projects/base-app)
 - [app-dynamodb](projects/app-dynamodb)
 - [app-modules](projects/app-modules)
+- [base-app](projects/base-app)
+- [cognos](projects/cognos)
 
 ## backup
 
