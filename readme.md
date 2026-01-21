@@ -4,6 +4,7 @@
 
 - [app-dynamodb](projects/app-dynamodb)
 - [app-modules](projects/app-modules)
+- [aws-keyspaces](projects/aws-keyspaces)
 - [base-app](projects/base-app)
 - [cognos](projects/cognos)
 
