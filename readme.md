@@ -2,10 +2,11 @@
 
 ## projects
 
-- [base-app](projects/base-app)
 - [app-dynamodb](projects/app-dynamodb)
 - [app-modules](projects/app-modules)
-- [exploratory](projects/exploratory)
+- [aws-keyspaces](projects/aws-keyspaces)
+- [base-app](projects/base-app)
+- [cognos](projects/cognos)
 
 ## backup
 
