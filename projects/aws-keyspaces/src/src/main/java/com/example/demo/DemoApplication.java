@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.datastax.oss.driver.api.core.CqlSession;
+import com.example.model.FeatureRepository;
 import com.example.model.User;
 import com.example.model.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class DemoApplication implements CommandLineRunner {
 
     @Autowired(required = true)
     private UserRepository sampleUserRepository;
+
+    @Autowired(required = true)
+    private FeatureRepository featureRepository;
 
     @Autowired
     private CassandraOperations cassandraTemplate;
@@ -51,6 +55,10 @@ public class DemoApplication implements CommandLineRunner {
         User userOut = sampleUserRepository.findByUsername(userName);
 
         System.out.println("Primary Key: " + userOut.getUsername());
+
+        featureRepository
+            .findByTenantIdAndCompanyIdAndCountryCodeAndIsActive("ROYALF", "7030", "USA", true)
+            .forEach(System.out::println);
 
     }
 
