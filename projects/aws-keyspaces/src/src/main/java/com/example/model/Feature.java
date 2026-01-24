@@ -10,6 +10,9 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyClass;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
+import java.util.Date;
+import java.util.Map;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -18,7 +21,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @Table(value = Feature.TABLE_NAME)
 public class Feature {
 
-    public static final String TABLE_NAME = "features";
+    public static final String TABLE_NAME = "app_features";
 
     @Data
     @AllArgsConstructor
@@ -26,16 +29,13 @@ public class Feature {
     @Builder(toBuilder = true)
     @PrimaryKeyClass
     public static class Key {
-        @PrimaryKeyColumn(name = "tenant_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
-        private String tenantId;
-
-        @PrimaryKeyColumn(name = "company_id", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
+        @PrimaryKeyColumn(name = "company_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
         private String companyId;
 
-        @PrimaryKeyColumn(name = "country_code", ordinal = 2, type = PrimaryKeyType.PARTITIONED)
+        @PrimaryKeyColumn(name = "country_code", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
         private String countryCode;
 
-        @PrimaryKeyColumn(name = "feature_id", ordinal = 3, type = PrimaryKeyType.CLUSTERED)
+        @PrimaryKeyColumn(name = "feature_id", ordinal = 2, type = PrimaryKeyType.CLUSTERED)
         private String featureId;
     }
 
@@ -44,5 +44,26 @@ public class Feature {
 
     @Column("is_active")
     private Boolean isActive;
+
+    @Column("names")
+    private Map<String, String> names;
+
+    @Column("tags")
+    private Map<String, String> tags;
+
+    @Column("code")
+    private Integer code;
+
+    @Column("prices")
+    private Set<Integer> prices;
+
+    @Column("total")
+    private Long total;
+
+    @Column("alt_codes")
+    private Set<String> altCodes;
+
+    @Column("last_updated")
+    private Date lastUpdated;
 
 }
