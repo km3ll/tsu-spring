@@ -1,5 +1,14 @@
 # tsu-spring
 
+
+## learn
+
+- [learn-dynamodb](learn/learn-dynamodb)
+- [learn-h2](learn/learn-h2)
+- [learn-postgresql](learn/learn-postgresql)
+- [learn-redis](learn/learn-redis)
+- [learn-spring](learn/learn-spring)
+
 ## projects
 
 - [app-dynamodb](projects/app-dynamodb)
@@ -13,9 +22,4 @@
 - [app-bookstore](backup/app-bookstore)
 - [app-pokemon](backup/app-pokemon)
 - [app-secureapi](backup/app-secureapi)
-- [learn-dynamodb](backup/learn-dynamodb)
-- [learn-h2](backup/learn-h2)
-- [learn-postgresql](backup/learn-postgresql)
-- [learn-redis](backup/learn-redis)
-- [learn-spring](backup/learn-spring)
 - [test-containers](backup/test-containers)
