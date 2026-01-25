@@ -14,8 +14,8 @@
 
 ## base
 
-- [base-app](projects/base-app)
-- [base-cognos](projects/cognos)
+- [base-app](base/base-app)
+- [base-cognos](base/base-cognos)
 
 ## learn
 
