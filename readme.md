@@ -1,5 +1,21 @@
 # tsu-spring
 
+## app
+
+- [app-bookstore](app/app-bookstore)
+- [app-dynamodb](app/app-dynamodb)
+- [app-modules](app/app-modules)
+- [app-pokemon](app/app-pokemon)
+- [app-secureapi](app/app-secureapi)
+
+## aws
+
+- [aws-keyspaces](aws/aws-keyspaces)
+
+## base
+
+- [base-app](projects/base-app)
+- [base-cognos](projects/cognos)
 
 ## learn
 
@@ -9,17 +25,6 @@
 - [learn-redis](learn/learn-redis)
 - [learn-spring](learn/learn-spring)
 
-## projects
+## test
 
-- [app-dynamodb](projects/app-dynamodb)
-- [app-modules](projects/app-modules)
-- [aws-keyspaces](projects/aws-keyspaces)
-- [base-app](projects/base-app)
-- [cognos](projects/cognos)
-
-## backup
-
-- [app-bookstore](backup/app-bookstore)
-- [app-pokemon](backup/app-pokemon)
-- [app-secureapi](backup/app-secureapi)
-- [test-containers](backup/test-containers)
+- [test-containers](test/test-containers)
