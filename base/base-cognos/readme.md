@@ -1,4 +1,4 @@
-# cognos
+# base-cognos
 
 ## commands
 
