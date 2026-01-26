@@ -1,0 +1,12 @@
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000" # expose DynamoDB local on localhost:8000
+    command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
+    restart: unless-stopped
+    environment:
+      - AWS_ACCESS_KEY_ID=dummyKey
+      - AWS_SECRET_ACCESS_KEY=dummySecret
+      - AWS_DEFAULT_REGION=us-east-1
