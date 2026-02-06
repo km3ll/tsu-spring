@@ -11,9 +11,10 @@ import java.util.Set;
 @NoArgsConstructor
 public class Item {
 
-    private String country;
-    private String id;
-    private String name;
+	private String country;
 
+	private String id;
+
+	private String name;
 
 }
