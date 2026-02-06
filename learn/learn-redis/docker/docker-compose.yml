@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  redis-node-1:
+    image: redis:7.4-alpine
+    networks:
+      - redis-net
+    restart: always
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-announce-ip redis-node-1
+      --cluster-announce-port 6379
+      --appendonly yes
+      --requirepass your_strong_password
+      --masterauth your_strong_password
+    volumes:
+      - redis_data_1:/data
+
+  redis-node-2:
+    image: redis:7.4-alpine
+    networks:
+      - redis-net
+    restart: always
+    ports:
+      - "6380:6379"
+    command: >
+      redis-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-announce-ip redis-node-2
+      --cluster-announce-port 6379
+      --appendonly yes
+      --requirepass your_strong_password
+      --masterauth your_strong_password
+    volumes:
+      - redis_data_2:/data
+
+  redis-node-3:
+    image: redis:7.4-alpine
+    networks:
+      - redis-net
+    restart: always
+    ports:
+      - "6381:6379"
+    command: >
+      redis-server
+      --port 6379
+      --cluster-enabled yes
+      --cluster-config-file nodes.conf
+      --cluster-node-timeout 5000
+      --cluster-announce-ip redis-node-3
+      --cluster-announce-port 6379
+      --appendonly yes
+      --requirepass your_strong_password
+      --masterauth your_strong_password
+    volumes:
+      - redis_data_3:/data
+
+volumes:
+  redis_data_1:
+  redis_data_2:
+  redis_data_3:
+
+networks:
+  redis-net:
+    external: true
