@@ -24,6 +24,7 @@ import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Consumer;
 
 public class FileMonitorCredentialsProvider implements CredentialsProvider {
 
@@ -35,13 +36,21 @@ public class FileMonitorCredentialsProvider implements CredentialsProvider {
 
 	private final Path filePath;
 
+	private final Consumer<Credentials> onCredentialsChanged;
+
 	private WatchService watchService;
 
 	private ExecutorService executor;
 
 	public static FileMonitorCredentialsProvider create(String filePath) {
-		logger.info("Creating FileMonitorCredentialsProvider for file: {}", filePath);
-		return new FileMonitorCredentialsProvider(Paths.get(filePath));
+		logger.info("Creating FileMonitorCredentialsProvider without consumer for file: {}", filePath);
+		return new FileMonitorCredentialsProvider(Paths.get(filePath), credentials -> {
+		});
+	}
+
+	public static FileMonitorCredentialsProvider create(String filePath, Consumer<Credentials> onCredentialsChanged) {
+		logger.info("Creating FileMonitorCredentialsProvider with consumer for file: {}", filePath);
+		return new FileMonitorCredentialsProvider(Paths.get(filePath), onCredentialsChanged);
 	}
 
 	public Credentials getCredentials() {
@@ -81,7 +90,7 @@ public class FileMonitorCredentialsProvider implements CredentialsProvider {
 		}
 	}
 
-	private FileMonitorCredentialsProvider(Path filePath) {
+	private FileMonitorCredentialsProvider(Path filePath, Consumer<Credentials> onCredentialsChanged) {
 		if (!filePath.isAbsolute()) {
 			throw new IllegalArgumentException("Credentials file path it not absolute");
 		}
@@ -89,6 +98,8 @@ public class FileMonitorCredentialsProvider implements CredentialsProvider {
 			throw new IllegalArgumentException("Credentials file path does not point to a file");
 		}
 		this.filePath = filePath;
+		this.onCredentialsChanged = (onCredentialsChanged == null) ? credentials -> {
+		} : onCredentialsChanged;
 	}
 
 	private WatchService startWatchService() throws IOException {
@@ -138,6 +149,7 @@ public class FileMonitorCredentialsProvider implements CredentialsProvider {
 			HashMap<String, String> map = objectMapper.readValue(filePath.toFile(), HashMap.class);
 			Credentials credentials = Credentials.of(map.get("username"), map.get("password"));
 			atomicCredentials.set(Optional.of(credentials));
+			onCredentialsChanged.accept(credentials);
 		}
 		catch (IOException e) {
 			logger.error("Could not reload credentials", e);
