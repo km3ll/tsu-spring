@@ -2,10 +2,30 @@
 
 ## features
 
-Functional
-
-
-Testing
+- Apache Commons
+- Atomic Reference
+- Config Properties
+- Credentials File
+- Disposable Bean
+- Docker Redis
+- Executor Service
+- File Monitor Credentials Provider
+- Get Mapping
+- Instancio
+- Lettuce Client Options
+- Lettuce Connection Factory
+- Lettuce Pooling Client Config
+- Lettuce Topology Refresh Options
+- Lombok
+- Post Mapping
+- Redis Cache Manager
+- Request Mapping
+- Rest Controller
+- Spring Boot Data Redis
+- Spring Boot Maven Plugin
+- Spring Boot Test
+- Spring Boot Web
+- Watch Service
 
 
 ## commands
