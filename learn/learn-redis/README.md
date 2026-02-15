@@ -1,5 +1,13 @@
 # learn-redis
 
+## features
+
+Functional
+
+
+Testing
+
+
 ## commands
 
 #### bash
