@@ -1,5 +1,25 @@
 # learn-h2
 
+## features
+
+- Apache Commons
+- CRUD Repository
+- Delete Mapping
+- Get Mapping
+- H2 Console
+- H2 Database
+- Hikari Config
+- JPA Hibernate DDL, Init
+- Lombok
+- Post Mapping
+- Put Mapping
+- Request Mapping
+- Rest Controller
+- Spring Boot Data JPA
+- Spring Boot Dev Tools
+- Spring Boot Test
+- Spring Boot Web
+
 ## h2-console
 
 URL: `localhost:8080/h2-console`
