@@ -2,6 +2,16 @@
 
 ## features
 
+- JUnit
+- Lombok
+- Logback
+- Maven Surefire Plugin
+- Spring Boot Test
+- Spring Boot Web
+- Test Containers
+ 
+## containers
+
 - Cassandra
 - Kafka
 - RabbitMQ

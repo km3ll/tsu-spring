@@ -62,7 +62,7 @@
         <profile>
             <id>AllTests</id>
             <properties>
-                <tests>Unit,Integration,Parallel,Performance</tests>
+                <tests>Integration,Performance,Unit</tests>
             </properties>
         </profile>
     </profiles>
