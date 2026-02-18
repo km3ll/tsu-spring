@@ -1,5 +1,12 @@
 # app-modules
 
+## features
+
+- JUnit 5
+- Lombok
+- Maven Modules
+- Spring Boot Web
+
 ## commands
 
 ```bash
