@@ -2,16 +2,40 @@
 
 ## features
 
-- ApplicationRunner
-- AuthenticationFilter
-- AuthenticationManager
-- AuthEntryPoint
-- JSON Web Token
-- OncePerRequestFilter
+- Application Runner
+- Async
+- Authentication Entry Point
+- Authentication Filter
+- Authentication Manager
+- Common Request Logging Filter
+- Configuration Properties
+- Get Mapping
+- Google Guava
+- Google Protobuf
+- H2 Database
+- Instancio
+- JSON Web Token (JWT)
+- Logging Levels Config
+- Lombok
+- Maven Surefire Plugin
+- Once Per Request Filter
 - PasswordEncoder
-- SecurityFilterChain
+- Pre Destroy
+- Post Construct
+- Request Mapping
+- Rest Controller
+- Rest Template
+- Scheduled Cron, FixedDelay, FixedRate
+- Security Context Holder
+- Security Filter Chain
+- Spring Boot Data JDBC
 - Spring Boot Security
-- UserDetails
+- Spring Boot Test
+- Spring Boot Web
+- User Details
+- User Details Service
+- Web Filter
+- Web Security
 
 ## commands
 

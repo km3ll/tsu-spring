@@ -1,6 +1,6 @@
 # learn-dynamodb
 
-## feature
+## features
 
 - AWS Credentials
 - AWS Credentials Provider
