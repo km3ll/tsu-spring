@@ -3,15 +3,37 @@
 ## features
 
 - Actuators
+- Actuators Management Endpoints
 - Arrange-Act-Assert
+- Controller Advice
+- Custom Exception
 - DDL Scripts
+- Delete Mapping
 - DML Scripts
 - FileUtils
 - Generators
+- Get Mapping
 - Given-When-Then
+- Global Exception Handles
+- Google Protobuf
+- H2 Console
 - H2 Database
-- MockitoExtension
-- Spring Data JPA
+- Instancio
+- JPA Query
+- JPA Repository
+- Log Levels Config
+- Lombok
+- Maven Surefire Plugin
+- Mockito Extension
+- Post Mapping
+- Put Mapping
+- Request Mapping
+- Rest Controller
+- Spring Boot Actuator
+- Spring Boot Data JPA
+- Spring Boot Security
+- Spring Boot Test
+- Spring Boot Web
 - TestKit
 
 ## commands
