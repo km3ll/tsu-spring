@@ -1,5 +1,31 @@
 # aws-dynamodb
 
+## features
+
+- AWS SDK DynamoDB
+- Credentials Provider
+- Delete Mapping
+- DynamoDB Client
+- DynamoDB Enhanced Client
+- DynamoDB Table
+- Get Mapping
+- Google Guava
+- Jackson Core
+- Lombok
+- Post Mapping
+- Put Mapping
+- Query Conditional
+- Request Controller
+- Rest Controller
+- Spring Boot Test
+- Spring Boot Web
+- Spring Data DynamoDB
+- Spring Java Format Plugin
+
+## containers
+
+- DynamoDB
+
 ## commands
 
 ```bash
@@ -11,11 +37,6 @@ java -jar target/aws-dynamodb-1.0.jar
 docker compose up -d
 docker compose down
 ```
-
-## entities
-
-- customer
-
 
 ## references
 

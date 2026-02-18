@@ -1,5 +1,16 @@
 # base-app
 
+## features
+
+- Commons Collections
+- Get Mapping
+- Lombok
+- Request Mapping
+- Rest Controller
+- Spring Boot Actuator
+- Spring Boot Test
+- Spring Boot Web
+
 ## commands
 
 ```bash

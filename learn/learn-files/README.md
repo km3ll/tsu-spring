@@ -1,5 +1,24 @@
 # learn-files
 
+## features
+
+- Atomic Reference
+- Commons Collections
+- Commons Pool2
+- Configuration Properties
+- Executable
+- Executor Service
+- File Monitor Credentials Provider
+- Instancio
+- Lombok
+- Post-Construct
+- Pre-Destroy
+- Spring Boot Data Redis
+- Spring Boot Test
+- Spring Boot Web
+- Spring Java Format
+- Watch Service
+
 ## commands
 
 #### bash

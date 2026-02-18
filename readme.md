@@ -10,6 +10,7 @@
 
 ## aws
 
+- [aws-dynamodb](aws/aws-dynamodb)
 - [aws-keyspaces](aws/aws-keyspaces)
 
 ## base

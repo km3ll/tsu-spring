@@ -1,5 +1,17 @@
 # base-cognos
 
+## features
+
+- Get Mapping
+- Google Java Format
+- Maven Modules
+- Maven Surefire Plugin
+- Maven Spotless Plugin
+- Request Mapping
+- Rest Controller
+- Spring Boot Test
+- Spring Boot Web
+
 ## commands
 
 ```bash
