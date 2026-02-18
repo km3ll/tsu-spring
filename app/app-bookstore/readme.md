@@ -2,19 +2,32 @@
 
 ## features
 
-- CommandLineRunner
-- CommonsRequestLoggingFilter
-- ConfigurableAppContext
-- CrudRepository
+- Command Line Runner
+- Commons Request Logging Filter
+- Configurable Application Context
+- CRUD Repository
 - DDL Scripts (schema.sql)
 - DML Scripts (data.sql)
+- Get Mapping
+- Google Protobuf
+- H2 Console
 - H2 Database
+- Hikari Config
+- Instancio
+- JUnit 5 
+- Jupiter Parallel Execution
+- Log Levels Config
+- Lombok
+- Maven Surefire Plugin
 - Parallel Test Execution
-- Protobuf
-- Record
-- SecurityFilterChain
+- Request Mapping
+- Rest Controller
+- Security Filter Chain
 - Spring Boot Security
+- Spring Boot Test
+- Spring Boot Web
 - Spring Data JDBC
+- Web Security
 
 ## commands
 
