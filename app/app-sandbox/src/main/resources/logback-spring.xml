@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Register Spring Boot's %clr color converter -->
+    <conversionRule conversionWord="clr" class="org.springframework.boot.logging.logback.ColorConverter"/>
+
+    <!-- ==================== PROPERTIES ==================== -->
+    <springProperty scope="context" name="APP_NAME"  source="spring.application.name" defaultValue="app"/>
+    <springProperty scope="context" name="LOG_LEVEL" source="logging.level.root"       defaultValue="INFO"/>
+
+    <!-- ==================== APPENDERS ==================== -->
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--
+                Color breakdown:
+                  %clr(...){faint}  → timestamp in grey
+                  %clr(%5p)         → log level colored by severity:
+                                        ERROR = red, WARN = yellow,
+                                        INFO  = green, DEBUG = cyan, TRACE = blue
+                  %clr(%logger{36}){cyan} → logger name in cyan
+                  %clr(%msg){default}     → message in default terminal color
+            -->
+            <pattern>%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr([%thread]){faint} %clr(%-5level) %clr(%logger{36}){cyan} - %clr(%msg){default}%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- Default fallback root logger (used when no profile is active) -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
