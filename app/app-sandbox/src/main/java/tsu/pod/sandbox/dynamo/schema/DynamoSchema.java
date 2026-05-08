@@ -10,7 +10,7 @@ import software.amazon.awssdk.services.dynamodb.model.KeyType;
 import software.amazon.awssdk.services.dynamodb.model.ProvisionedThroughput;
 import software.amazon.awssdk.services.dynamodb.model.ScalarAttributeType;
 
-public abstract class DynamoDbSchema {
+public abstract class DynamoSchema {
 
 	protected static final String PK = "PK";
 

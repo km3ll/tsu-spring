@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Profile;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSecondaryPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 @Builder
@@ -14,13 +15,13 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortK
 @NoArgsConstructor
 @AllArgsConstructor
 @Profile("dynamodb")
-public class OrdersDbEntity {
+public class UsersEntity {
 
 	private String pk;
 
 	private String sk;
 
-	private Integer quantity;
+	private String email;
 
 	@DynamoDbPartitionKey
 	@DynamoDbAttribute("PK")
@@ -42,13 +43,14 @@ public class OrdersDbEntity {
 		this.sk = sk;
 	}
 
-	@DynamoDbAttribute("quantity")
-	public Integer getQuantity() {
-		return quantity;
+	@DynamoDbAttribute("email")
+	@DynamoDbSecondaryPartitionKey(indexNames = "by-email")
+	public String getEmail() {
+		return email;
 	}
 
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

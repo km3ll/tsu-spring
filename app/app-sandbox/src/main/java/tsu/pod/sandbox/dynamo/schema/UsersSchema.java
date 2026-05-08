@@ -17,7 +17,7 @@ import software.amazon.awssdk.services.dynamodb.model.ScalarAttributeType;
 @Builder
 @Component
 @Profile("dynamodb")
-public class UsersDbSchema extends DynamoDbSchema {
+public class UsersSchema extends DynamoSchema {
 
 	private static final String TABLE_NAME = "sandbox-users";
 

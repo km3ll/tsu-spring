@@ -1,8 +1,7 @@
 package tsu.pod.sandbox.dynamo.config;
 
 import java.net.URI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -13,14 +12,13 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
+@Slf4j
 @Configuration
 @Profile("dynamodb")
-public class DynamoDbClientConfig {
+public class DynamoClientConfig {
 
-	private final Logger logger = LoggerFactory.getLogger(DynamoDbClientConfig.class);
-
-	public DynamoDbClientConfig() {
-		logger.info("Initialized");
+	public DynamoClientConfig() {
+		log.info("Initialized");
 	}
 
 	@Bean
@@ -34,7 +32,7 @@ public class DynamoDbClientConfig {
 			.credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create("dummy", "dummy")))
 			.build();
 
-		logger.info("DynamoDbClient created");
+		log.info("DynamoDbClient created");
 		return client;
 	}
 
@@ -42,7 +40,7 @@ public class DynamoDbClientConfig {
 	DynamoDbEnhancedClient dynamoDbEnhancedClient(DynamoDbClient dynamoDbClient) {
 		DynamoDbEnhancedClient enhancedClient = DynamoDbEnhancedClient.builder().dynamoDbClient(dynamoDbClient).build();
 
-		logger.info("DynamoDbEnhancedClient created");
+		log.info("DynamoDbEnhancedClient created");
 		return enhancedClient;
 	}
 

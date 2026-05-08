@@ -2,39 +2,37 @@ package tsu.pod.sandbox.dynamo.persistence.repository;
 
 import java.util.List;
 import java.util.Optional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
-import tsu.pod.sandbox.dynamo.persistence.model.OrdersDbEntity;
+import tsu.pod.sandbox.dynamo.persistence.model.OrdersEntity;
 
+@Slf4j
 @Repository
 @Profile("dynamodb")
 public class OrdersDbRepository {
 
-	private final Logger logger = LoggerFactory.getLogger(OrdersDbRepository.class);
+	private DynamoDbTable<OrdersEntity> table;
 
-	private DynamoDbTable<OrdersDbEntity> table;
-
-	public OrdersDbRepository(DynamoDbTable<OrdersDbEntity> table) {
-		logger.info("Initialized");
+	public OrdersDbRepository(DynamoDbTable<OrdersEntity> table) {
+		log.info("Initialized");
 		this.table = table;
 	}
 
-	public void save(OrdersDbEntity entity) {
+	public void save(OrdersEntity entity) {
 		table.putItem(entity);
 	}
 
-	public void saveAll(List<OrdersDbEntity> entities) {
+	public void saveAll(List<OrdersEntity> entities) {
 		entities.forEach(this::save);
 	}
 
-	public Optional<OrdersDbEntity> findById(String id) {
-		return Optional.ofNullable(table.getItem(OrdersDbEntity.builder().pk(id).build()));
+	public Optional<OrdersEntity> findById(String id) {
+		return Optional.ofNullable(table.getItem(OrdersEntity.builder().pk(id).build()));
 	}
 
-	public List<OrdersDbEntity> findAll() {
+	public List<OrdersEntity> findAll() {
 		return table.scan().items().stream().toList();
 	}
 

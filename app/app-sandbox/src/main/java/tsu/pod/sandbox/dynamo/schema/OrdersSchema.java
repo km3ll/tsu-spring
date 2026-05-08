@@ -8,7 +8,7 @@ import software.amazon.awssdk.services.dynamodb.model.CreateTableRequest;
 @Builder
 @Component
 @Profile("dynamodb")
-public class OrdersDbSchema extends DynamoDbSchema {
+public class OrdersSchema extends DynamoSchema {
 
 	public static final String TABLE_NAME = "sandbox-orders";
 
