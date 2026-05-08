@@ -12,11 +12,11 @@ import org.testcontainers.utility.DockerImageName;
 @Slf4j
 @Configuration
 @Profile("postgresql")
-public class PostgresqlContainerConfig {
+public class PostgreSqlContainerConfig {
 
 	private PostgreSQLContainer<?> container;
 
-	public PostgresqlContainerConfig() {
+	public PostgreSqlContainerConfig() {
 		log.info("Initialized");
 	}
 
