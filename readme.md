@@ -6,6 +6,7 @@
 - [app-dynamodb](app/app-dynamodb)
 - [app-modules](app/app-modules)
 - [app-pokemon](app/app-pokemon)
+- [app-sandbox](app/app-sandbox)
 - [app-secureapi](app/app-secureapi)
 
 ## aws
