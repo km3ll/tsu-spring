@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class FileReader {
+public class CsvFileUtils {
 
-	public List<String[]> readCsvFile(String path) {
+	public List<String[]> read(String path) {
 		ClassPathResource resource = new ClassPathResource(path);
 		try {
 

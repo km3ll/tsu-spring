@@ -15,7 +15,7 @@ import tsu.pod.sandbox.dynamo.schema.DynamoSchema;
 import tsu.pod.sandbox.dynamo.schema.OrdersSchema;
 import tsu.pod.sandbox.dynamo.schema.UsersSchema;
 import tsu.pod.sandbox.utils.FilePaths;
-import tsu.pod.sandbox.utils.FileReader;
+import tsu.pod.sandbox.utils.CsvFileUtils;
 
 @Slf4j
 @Configuration
@@ -28,20 +28,20 @@ public class DynamoInitializerConfig {
 
 	private final UsersSchema usersDbSchema;
 
-	private final FileReader fileReader;
+	private final CsvFileUtils csvFileUtils;
 
 	public DynamoInitializerConfig(DynamoDbClient dynamoDbClient, OrdersSchema ordersDbSchema,
-			UsersSchema usersDbSchema, FileReader fileReader) {
+			UsersSchema usersDbSchema, CsvFileUtils csvFileUtils) {
 		this.dynamoDbClient = dynamoDbClient;
 		this.ordersDbSchema = ordersDbSchema;
 		this.usersDbSchema = usersDbSchema;
-		this.fileReader = fileReader;
+		this.csvFileUtils = csvFileUtils;
 		log.info("Initialized");
 	}
 
 	@Bean
 	ApplicationRunner dynamoDbInitializer(OrdersSchema ordersDbSchema, UsersSchema usersDbSchema,
-			FileReader fileReader) {
+			CsvFileUtils csvFileUtils) {
 		return args -> {
 			initialize(ordersDbSchema);
 			initialize(usersDbSchema);
@@ -71,7 +71,7 @@ public class DynamoInitializerConfig {
 	}
 
 	private void loadOrders() {
-		List<String[]> records = fileReader.readCsvFile(FilePaths.DYNAMO_ORDERS_PATH);
+		List<String[]> records = csvFileUtils.read(FilePaths.DYNAMO_ORDERS_PATH);
 		records.forEach(record -> {
 			Map<String, AttributeValue> item = new HashMap<>();
 			item.put("PK", AttributeValue.fromS(record[0]));
@@ -83,7 +83,7 @@ public class DynamoInitializerConfig {
 	}
 
 	private void loadUsers() {
-		List<String[]> records = fileReader.readCsvFile(FilePaths.DYNAMO_USERS_PATH);
+		List<String[]> records = csvFileUtils.read(FilePaths.DYNAMO_USERS_PATH);
 		records.forEach(record -> {
 			Map<String, AttributeValue> item = new HashMap<>();
 			item.put("PK", AttributeValue.fromS(record[0]));
